@@ -20,6 +20,7 @@ html {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn {
@@ -82,6 +83,11 @@ a {
         background-color: white;
         transition: none;
     }
+}
+
+.content-wrapper {
+    width: 1920px;
+    max-width: 1920px;
 }
 
 // fonts:

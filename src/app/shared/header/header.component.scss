@@ -1,0 +1,44 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
+@mixin dFlex($fd:row, $jc:center, $ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.header-content {
+    @include dFlex($jc: space-between);
+    padding: 37px 0;
+    height: 150px;
+}
+
+nav {
+    @include dFlex();
+    gap: 29px;
+
+    > a {
+        font-size: 23px;
+        background-position: bottom left;
+        background-size: 55px 3px;
+        background-repeat: no-repeat;
+        padding-bottom: 4px;
+        transition: all 100ms ease-in;
+
+        &:hover {
+            color: $prim-color-green;
+        }
+
+        &:active {
+            color: white;
+            transition: none;
+        }
+    }
+}
+
+.link-underlined {
+    background-image: linear-gradient(to right, $prim-color-purple, $prim-color-purple);
+}

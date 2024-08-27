@@ -10,5 +10,23 @@
     min-height: 100vh;
     width: 100%;
     background-color: #141D2F;
-    @include dFlex($fd: column, $jc: flex-start)
+    @include dFlex($fd: column, $jc: flex-start);
+}
+
+app-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include dFlex();
+}
+
+app-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include dFlex();
 }

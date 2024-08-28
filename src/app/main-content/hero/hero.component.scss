@@ -65,7 +65,7 @@ $prim-color-bg: #141D2F;
 }
 
 .lower-container {
-    @include dFlex($ai: unset, $jc: space-between);
+    @include dFlex($ai: flex-end, $jc: space-between);
     z-index: 5;
     margin-top: auto;
     padding-bottom: 24px;
@@ -91,21 +91,28 @@ $prim-color-bg: #141D2F;
     }
 
     .scroll-down-container {
-        @include dFlex();
-        transform: rotate(90deg);
-        padding-right: 110px;
+        @include dFlex($fd: column);
 
         > span {
             font-size: 23px;
+            writing-mode: vertical-lr;
         }
 
         > img {
             height: 24px;
             width: 24px;
-            transform: rotate(-90deg);
         }
     }
 
+}
+
+.vector-social-media {
+    position: absolute;
+    bottom: 39px;
+    left: 0;
+    height: 4px;
+    object-fit: cover;
+    width: calc((100vw - 2000px) / 2);
 }
 
 .hero-background {

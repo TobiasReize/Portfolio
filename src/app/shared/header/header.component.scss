@@ -16,6 +16,11 @@ $prim-color-bg: #141D2F;
     height: 150px;
 }
 
+.name-logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
 nav {
     @include dFlex();
     gap: 29px;

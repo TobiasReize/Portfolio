@@ -1,3 +1,8 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
 @mixin dFlex($fd:row, $jc:center, $ai:center) {
     display: flex;
     flex-direction: $fd;
@@ -15,10 +20,12 @@
 
 app-header {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    background-color: $prim-color-bg;
+    z-index: 20;
     @include dFlex();
 }
 

@@ -1,0 +1,117 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
+@mixin dFlex($fd:row, $jc:center, $ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.img-title-container {
+    @include dFlex($jc: space-between);
+
+    > .hero-profil-bg {
+        @include dFlex();
+        background-image: url('/assets/img/hero_section/hero_photo-shadows.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    img {
+        height: 700px;
+        object-fit: contain;
+    }
+}
+
+.right-container {
+    @include dFlex($fd: column, $jc: space-between);
+    height: 260px;
+    z-index: 5;
+
+    .title-container {
+        @include dFlex();
+    
+        .i-am {
+            font-size: 64px;
+            transform: rotate(270deg);
+            text-wrap: nowrap;
+            line-height: 1;
+        }
+    
+        > div {
+            @include dFlex($fd: column, $ai: flex-start);
+            gap: 8px;
+    
+            .name {
+                font-size: 90px;
+                font-weight: 700;
+                text-wrap: nowrap;
+                line-height: 1;
+            }
+    
+            .title {
+                font-size: 58px;
+                color: $prim-color-purple;
+                text-wrap: nowrap;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.lower-container {
+    @include dFlex($ai: unset, $jc: space-between);
+    z-index: 5;
+    margin-top: auto;
+    padding-bottom: 24px;
+
+    .social-media {
+        @include dFlex();
+        gap: 32px;
+
+        > img {
+            height: 30px;
+            width: 30px;
+            transition: all 100ms ease-out;
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.3;
+            }
+        }
+
+        > a {
+            font-size: 23px;
+        }
+    }
+
+    .scroll-down-container {
+        @include dFlex();
+        transform: rotate(90deg);
+        padding-right: 110px;
+
+        > span {
+            font-size: 23px;
+        }
+
+        > img {
+            height: 24px;
+            width: 24px;
+            transform: rotate(-90deg);
+        }
+    }
+
+}
+
+.hero-background {
+    position: absolute;
+    top: 45vh;
+    left: 0;
+    right: 0;
+    width: 100%;
+}

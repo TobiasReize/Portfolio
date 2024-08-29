@@ -20,6 +20,12 @@ app-hero {
     height: 100vh;
     padding-top: 150px;
     position: relative;
-    overflow-y: hidden;
     @include dFlex($fd: column, $jc: unset);
+}
+
+app-about-me {
+    padding: 124px 0 180px 0;
+    width: 100%;
+    z-index: 1;
+    @include dFlex();
 }

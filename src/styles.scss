@@ -23,6 +23,14 @@ a {
     cursor: pointer;
 }
 
+h1 {
+  font-size: 90px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  line-height: 1;
+  margin-block: 0;
+}
+
 .btn {
     border: unset;
     border-radius: 10px;

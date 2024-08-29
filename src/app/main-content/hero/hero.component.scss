@@ -47,13 +47,6 @@ $prim-color-bg: #141D2F;
             @include dFlex($fd: column, $ai: flex-start);
             gap: 8px;
     
-            .name {
-                font-size: 90px;
-                font-weight: 700;
-                text-wrap: nowrap;
-                line-height: 1;
-            }
-    
             .title {
                 font-size: 58px;
                 color: $prim-color-purple;

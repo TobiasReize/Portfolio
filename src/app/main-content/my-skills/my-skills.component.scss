@@ -1,0 +1,111 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
+@mixin dFlex($fd:row, $jc:center, $ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.content-wrapper {
+    @include dFlex($jc: space-between);
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 40px 88px;
+    align-items: start;
+
+    .skill {
+        @include dFlex($fd: column);
+        gap: 10px;
+        padding: 12px 17px 0 17px;
+
+        > img {
+            height: 60px;
+        }
+
+        > span {
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        &:hover {
+            animation-name: upward, downward;
+            animation-duration: 100ms, 300ms;
+            animation-timing-function: ease-in-out, ease-in;
+            animation-delay: 0ms, 200ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes upward {
+            from {
+                gap: 10px;
+                padding: 12px 17px 0 17px;
+            }
+
+            to {
+                gap: 22px;
+                padding: 0 17px 0 17px;
+            }
+        }
+
+        @keyframes downward {
+            from {
+                gap: 22px;
+                padding: 0 17px 0 17px;
+            }
+            
+            to {
+                gap: 10px;
+                padding: 12px 17px 0 17px;
+            }
+        }
+    }
+
+    .skill-learning {
+        @include dFlex($fd: column);
+        gap: 10px;
+        padding: 12px 17px 0 17px;
+
+        > svg {
+            height: 60px;
+        }
+
+        > svg g path {
+            fill: $prim-color-purple;
+            transition: all 300ms ease-out;
+        }
+
+        > span {
+            color: $prim-color-purple;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+            transition: all 300ms ease-out;
+        }
+
+        &:hover {
+            > svg g path {
+                fill: white;
+            }
+    
+            > span {
+                color: white;
+            }
+        }
+    }
+}
+
+.right-container {
+    @include dFlex($fd: column, $ai: flex-end);
+
+    h1 {
+        margin-bottom: 40px;
+    }
+}

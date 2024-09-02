@@ -24,8 +24,23 @@ app-hero {
 }
 
 app-about-me {
-    padding: 124px 0 180px 0;
+    padding-top: 124px;
     width: 100%;
-    z-index: 1;
+    position: relative;
     @include dFlex();
+}
+
+app-my-skills {
+    padding-top: 180px;
+    width: 100%;
+    @include dFlex();
+}
+
+
+
+// Responsive Design:
+@media(min-width: 1920px) {
+    app-about-me {
+        padding-left: calc((100vw - 1920px) / 2);
+    }
 }

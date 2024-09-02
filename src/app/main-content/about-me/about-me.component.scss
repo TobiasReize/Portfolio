@@ -10,8 +10,10 @@ $prim-color-bg: #141D2F;
     align-items: $ai;
 }
 
-.content-wrapper {
-    @include dFlex($jc: flex-start);
+.about-me-content {
+    @include dFlex();
+    width: 100%;
+    z-index: 5;
 }
 
 .left-container {
@@ -61,4 +63,11 @@ $prim-color-bg: #141D2F;
 .vector-about-me {
     height: 4px;
     flex: 1;
+}
+
+.about-me-shadow {
+    height: 800px;
+    position: absolute;
+    right: -460px;
+    top: -170px;
 }

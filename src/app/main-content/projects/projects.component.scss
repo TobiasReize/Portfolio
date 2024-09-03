@@ -44,6 +44,10 @@ $prim-color-bg: #141D2F;
     padding-left: 244px;
 }
 
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
 .portfolio-shadow {
     height: 930px;
     position: absolute;

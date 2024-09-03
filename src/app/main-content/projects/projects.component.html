@@ -7,10 +7,9 @@
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 
     <div class="projects-container content-wrapper">
-        <app-single-project></app-single-project>
-        <app-single-project></app-single-project>
-        <app-single-project></app-single-project>
-        <app-single-project></app-single-project>
+        @for (singleProject of projects; track singleProject; let i = $index) {
+            <app-single-project [ngClass]="{'row-reverse': isOdd(i)}" [singleProject]="singleProject"></app-single-project>
+        }
     </div>
 </div>
 <img class="portfolio-shadow" src="assets/img/portfolio_section/portfolio_shadow.png" alt="shadow">

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from '../../../shared/interface/project.interface';
 
 @Component({
   selector: 'app-single-project',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class SingleProjectComponent {
 
+  @Input() singleProject!: Project;
 }

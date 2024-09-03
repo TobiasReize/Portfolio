@@ -33,6 +33,7 @@ app-about-me {
 app-my-skills {
     padding-top: 180px;
     width: 100%;
+    position: relative;
     @include dFlex();
 }
 

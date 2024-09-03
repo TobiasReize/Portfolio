@@ -11,7 +11,9 @@ $prim-color-bg: #141D2F;
 }
 
 .content-wrapper {
-    @include dFlex($jc: space-between);
+    @include dFlex($jc: space-between, $ai: flex-start);
+    height: 410px;
+    z-index: 5;
 }
 
 .icon-container {
@@ -19,93 +21,147 @@ $prim-color-bg: #141D2F;
     grid-template-columns: auto auto auto auto;
     gap: 40px 88px;
     align-items: start;
+}
 
-    .skill {
-        @include dFlex($fd: column);
-        gap: 10px;
-        padding: 12px 17px 0 17px;
+.skill {
+    @include dFlex($fd: column);
+    gap: 10px;
+    padding: 12px 17px 0 17px;
 
-        > img {
-            height: 60px;
+    > img {
+        height: 60px;
+    }
+
+    > span {
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    &:hover {
+        animation-name: upward, downward;
+        animation-duration: 100ms, 300ms;
+        animation-timing-function: ease-in-out, ease-in;
+        animation-delay: 0ms, 200ms;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes upward {
+        from {
+            gap: 10px;
+            padding: 12px 17px 0 17px;
         }
 
-        > span {
-            font-weight: 700;
-            line-height: 1.2;
-            text-align: center;
-        }
-
-        &:hover {
-            animation-name: upward, downward;
-            animation-duration: 100ms, 300ms;
-            animation-timing-function: ease-in-out, ease-in;
-            animation-delay: 0ms, 200ms;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes upward {
-            from {
-                gap: 10px;
-                padding: 12px 17px 0 17px;
-            }
-
-            to {
-                gap: 22px;
-                padding: 0 17px 0 17px;
-            }
-        }
-
-        @keyframes downward {
-            from {
-                gap: 22px;
-                padding: 0 17px 0 17px;
-            }
-            
-            to {
-                gap: 10px;
-                padding: 12px 17px 0 17px;
-            }
+        to {
+            gap: 22px;
+            padding: 0 17px 0 17px;
         }
     }
 
-    .skill-learning {
-        @include dFlex($fd: column);
-        gap: 10px;
-        padding: 12px 17px 0 17px;
-
-        > svg {
-            height: 60px;
+    @keyframes downward {
+        from {
+            gap: 22px;
+            padding: 0 17px 0 17px;
         }
+        
+        to {
+            gap: 10px;
+            padding: 12px 17px 0 17px;
+        }
+    }
+}
 
+.skill-learning {
+    @include dFlex($fd: column);
+    gap: 10px;
+    padding: 12px 17px 0 17px;
+    position: relative;
+
+    svg {
+        height: 60px;
+    }
+
+    svg g path {
+        fill: $prim-color-purple;
+        transition: all 300ms ease-out;
+    }
+
+    span {
+        color: $prim-color-purple;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
+        transition: all 300ms ease-out;
+    }
+
+    .interests {
+        height: 135px;
+        position: absolute;
+        top: -102px;
+        left: 10%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 300ms ease-out;
+    }
+
+    &:hover {
         > svg g path {
-            fill: $prim-color-purple;
-            transition: all 300ms ease-out;
+            fill: white;
         }
 
         > span {
-            color: $prim-color-purple;
-            font-weight: 700;
-            line-height: 1.2;
-            text-align: center;
-            transition: all 300ms ease-out;
+            color: white;
         }
 
-        &:hover {
-            > svg g path {
-                fill: white;
-            }
-    
-            > span {
-                color: white;
-            }
+        .interests {
+            visibility: visible;
+            opacity: 1;
         }
     }
 }
 
 .right-container {
     @include dFlex($fd: column, $ai: flex-end);
+    width: 500px;
+    text-align: end;
 
     h1 {
         margin-bottom: 40px;
     }
+
+    p {
+        line-height: 1.3;
+    }
+
+    .another-skill {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 24px 0 16px 0;
+
+        > span {
+            font-size: 32px;
+            font-weight: 700;
+            color: $prim-color-purple;
+        }
+    }
+
+    p:last-of-type {
+        width: 410px;
+        margin-bottom: 40px;
+    }
+}
+
+.vector-my-skills {
+    height: 4px;
+    position: absolute;
+    right: 0;
+    top: 225px;
+    width: calc((100vw - 2000px) / 2);
+}
+
+.my-skills-shadow {
+    height: 900px;
+    position: absolute;
+    left: -500px;
+    top: 320px
 }

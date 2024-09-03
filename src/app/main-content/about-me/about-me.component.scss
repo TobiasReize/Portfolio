@@ -11,7 +11,7 @@ $prim-color-bg: #141D2F;
 }
 
 .about-me-content {
-    @include dFlex();
+    @include dFlex($jc: flex-start);
     width: 100%;
     z-index: 5;
 }

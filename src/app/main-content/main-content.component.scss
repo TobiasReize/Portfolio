@@ -37,11 +37,22 @@ app-my-skills {
     @include dFlex();
 }
 
+app-projects {
+    padding-top: 180px;
+    width: 100%;
+    position: relative;
+    @include dFlex();
+}
+
 
 
 // Responsive Design:
 @media(min-width: 1920px) {
     app-about-me {
+        padding-left: calc((100vw - 1920px) / 2);
+    }
+
+    app-projects {
         padding-left: calc((100vw - 1920px) / 2);
     }
 }

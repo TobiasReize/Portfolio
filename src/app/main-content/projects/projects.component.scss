@@ -1,0 +1,52 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
+@mixin dFlex($fd:row, $jc:center, $ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.portfolio-content {
+    @include dFlex($fd: column, $ai: flex-start);
+    width: 100%;
+    z-index: 5;
+
+    > p {
+        padding-left: 244px;
+        margin-bottom: 32px;
+    }
+}
+
+.portfolio-headline {
+    @include dFlex($jc: flex-start);
+    gap: 32px;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-left: 244px;
+
+    .vector-left {
+        height: 4px;
+    }
+
+    .vector-right {
+        height: 4px;
+        flex: 1;
+    }
+}
+
+.projects-container {
+    @include dFlex($fd: column, $ai: flex-start);
+    gap: 80px;
+    padding-left: 244px;
+}
+
+.portfolio-shadow {
+    height: 930px;
+    position: absolute;
+    left: -250px;
+    top: 900px;
+}

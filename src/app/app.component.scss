@@ -15,6 +15,7 @@ $prim-color-bg: #141D2F;
     min-height: 100vh;
     width: 100%;
     background-color: #141D2F;
+    overflow-x: hidden;
     @include dFlex($fd: column, $jc: flex-start);
 }
 

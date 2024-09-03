@@ -87,12 +87,12 @@ h1 {
     &:hover {
         cursor: pointer;
         background-color: $prim-color-green;
-        border: unset;
     }
 
     &:active {
         color: $prim-color-purple;
         background-color: white;
+        border: 1px solid white;
         transition: none;
     }
 }

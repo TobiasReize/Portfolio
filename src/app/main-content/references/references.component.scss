@@ -1,0 +1,17 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
+@mixin dFlex($fd:row, $jc:center, $ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.references-content {
+    @include dFlex($fd: column, $ai: flex-start);
+    width: 100%;
+    z-index: 5;
+}

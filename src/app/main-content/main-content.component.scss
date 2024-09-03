@@ -44,6 +44,13 @@ app-projects {
     @include dFlex();
 }
 
+app-references {
+    padding-top: 146px;
+    width: 100%;
+    position: relative;
+    @include dFlex();
+}
+
 
 
 // Responsive Design:

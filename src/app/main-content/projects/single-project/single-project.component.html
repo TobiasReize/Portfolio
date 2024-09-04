@@ -1,5 +1,5 @@
 <img src="assets/img/portfolio_section/{{singleProject.image}}" alt="image">
-<div class="project-right-container">
+<div class="project-text-container" [ngClass]="{'align-fe': isOdd(index)}">
     <h3>{{singleProject.title}}</h3>
     <h4>{{singleProject.techstack}}</h4>
     <p>{{singleProject.description}}</p>

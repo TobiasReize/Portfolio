@@ -28,13 +28,16 @@ $prim-color-bg: #141D2F;
     margin-bottom: 40px;
     padding-left: 244px;
 
-    .vector-left {
+    .vector-portfolio-left {
         height: 4px;
+        width: 100px;
+        background-color: $prim-color-purple;
     }
 
-    .vector-right {
+    .vector-portfolio-right {
         height: 4px;
         flex: 1;
+        background-color: $prim-color-purple;
     }
 }
 
@@ -46,6 +49,7 @@ $prim-color-bg: #141D2F;
 
 .row-reverse {
     flex-direction: row-reverse;
+    text-align: end;
 }
 
 .portfolio-shadow {

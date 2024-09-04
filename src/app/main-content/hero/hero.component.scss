@@ -105,6 +105,7 @@ $prim-color-bg: #141D2F;
     height: 4px;
     object-fit: cover;
     width: calc((100vw - 2000px) / 2);
+    background-color: $prim-color-purple;
 }
 
 .hero-background {

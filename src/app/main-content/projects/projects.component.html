@@ -1,14 +1,14 @@
 <div class="portfolio-content">
     <div class="portfolio-headline">
-        <img class="vector-left" src="assets/img/portfolio_section/vector-portfolio-left.png" alt="vector-left">
+        <div class="vector-portfolio-left"></div>
         <h1>Portfolio</h1>
-        <img class="vector-right" src="assets/img/portfolio_section/vector-portfolio-right.png" alt="vector-right">
+        <div class="vector-portfolio-right"></div>
     </div>
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 
     <div class="projects-container content-wrapper">
         @for (singleProject of projects; track singleProject; let i = $index) {
-            <app-single-project [ngClass]="{'row-reverse': isOdd(i)}" [singleProject]="singleProject"></app-single-project>
+            <app-single-project [ngClass]="{'row-reverse': isOdd(i)}" [singleProject]="singleProject" [index]="i"></app-single-project>
         }
     </div>
 </div>

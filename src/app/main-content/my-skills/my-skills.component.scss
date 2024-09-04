@@ -129,13 +129,8 @@ $prim-color-bg: #141D2F;
         margin-bottom: 40px;
     }
 
-    p {
+    h3 {
         line-height: 1.3;
-    }
-
-    .another-skill {
-        font-size: 32px;
-        font-weight: 700;
         margin: 24px 0 16px 0;
 
         > span {
@@ -143,6 +138,10 @@ $prim-color-bg: #141D2F;
             font-weight: 700;
             color: $prim-color-purple;
         }
+    }
+
+    p {
+        line-height: 1.3;
     }
 
     p:last-of-type {

@@ -51,6 +51,13 @@ app-references {
     @include dFlex();
 }
 
+app-contact {
+    padding-top: 180px;
+    width: 100%;
+    position: relative;
+    @include dFlex();
+}
+
 // Responsive Design:
 @media(min-width: 1920px) {
     app-about-me {

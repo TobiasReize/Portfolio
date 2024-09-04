@@ -81,7 +81,7 @@ h1 {
 
 .btn-snd {
     @extend .btn;
-    background-color: unset;
+    background-color: $prim-color-bg;
     border: 1px solid $prim-color-green;
 
     &:hover {

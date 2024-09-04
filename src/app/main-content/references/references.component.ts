@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class ReferencesComponent {
 
-  currentReview = 0;
+  currentReviewIndex = 0;
 
   testimonials = [
     {
@@ -32,19 +32,19 @@ export class ReferencesComponent {
 
 
   nextTestimonial() {
-    if ((this.currentReview + 1) >= this.testimonials.length) {
-      this.currentReview = 0;
+    if ((this.currentReviewIndex + 1) >= this.testimonials.length) {
+      this.currentReviewIndex = 0;
     } else {
-      this.currentReview++;
+      this.currentReviewIndex++;
     }
   }
 
 
   previousTestimonial() {
-    if ((this.currentReview - 1) < 0) {
-      this.currentReview = this.testimonials.length - 1;
+    if ((this.currentReviewIndex - 1) < 0) {
+      this.currentReviewIndex = this.testimonials.length - 1;
     } else {
-      this.currentReview--;
+      this.currentReviewIndex--;
     }
   }
 }

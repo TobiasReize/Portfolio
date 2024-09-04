@@ -1,23 +1,25 @@
 <div class="references-content">
     <div class="testimonials-container">
         <div class="comment-box">
-            <p>{{testimonials[currentReview].comment}}</p>
+            <p>{{testimonials[currentReviewIndex]['comment']}}</p>
             <div class="name-container">
                 <div class="testimonial-vector"></div>
-                <p>{{testimonials[currentReview].person}}</p>
+                <p>{{testimonials[currentReviewIndex]['person']}}</p>
             </div>
             <img src="assets/img/references_section/quote.png" alt="quote">
         </div>
-        <img class="person" src="assets/img/references_section/{{testimonials[currentReview].image}}" alt="person1">
+        <img class="person-img" src="assets/img/references_section/{{testimonials[currentReviewIndex]['image']}}" alt="person">
+        <!-- <div class="img-person" [ngStyle]="testimonials[currentReviewIndex]['image']"></div> -->
         <div class="vector-references"></div>
     </div>
     <div class="switch-container">
         <img (click)="previousTestimonial()" src="assets/img/references_section/arrow-left.png" alt="arrow-left">
 
         @for (item of testimonials; track item; let i = $index) {
-            <div class="enum-dot" [ngClass]="{'current': i == currentReview}"></div>
+            <div class="enum-dot" [ngClass]="{'current': i == currentReviewIndex}"></div>
         }
 
         <img (click)="nextTestimonial()" src="assets/img/references_section/arrow-right.png" alt="arrow-right">
     </div>
 </div>
+<img class="references-shadow" src="assets/img/references_section/references_shadow.png" alt="shadow">

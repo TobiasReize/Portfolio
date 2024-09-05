@@ -11,20 +11,30 @@
         </div>
         <form class="contact-form">
             <div class="input-container">
-                <input required type="text" name="" id="" placeholder="Your name">
-                <p>Your name is required</p>
+                <input (click)="checkInput('name', nameInput)" (input)="checkInput('name', nameInput)" [(ngModel)]="nameInput" [ngStyle]="setBorderStyle(nameInputStatus)" type="text" name="name" placeholder="Your name" required>
+                <p [ngClass]="{'d-block': nameInputStatus === 'notok'}">Your name is required</p>
+                <img [ngClass]="{'d-block': nameInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                <img [ngClass]="{'d-block': nameInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
             </div>
             <div class="input-container">
-                <input required type="email" name="" id="" placeholder="Your email">
-                <p>Your email is required</p>
+                <input (click)="checkInput('email', emailInput)" (input)="checkInput('email', emailInput)" [(ngModel)]="emailInput" [ngStyle]="setBorderStyle(emailInputStatus)" type="email" name="email" placeholder="Your email" required>
+                <p [ngClass]="{'d-block': emailInputStatus === 'notok'}">Your email is required</p>
+                <img [ngClass]="{'d-block': emailInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                <img [ngClass]="{'d-block': emailInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
             </div>
-            <div>
-                <textarea required name="" id="" placeholder="Your message"></textarea>
-                <p>Your message is empty</p>
+            <div class="textarea-container">
+                <textarea (click)="checkInput('message', messageInput)" (input)="checkInput('message', messageInput)" [(ngModel)]="messageInput" [ngStyle]="setBorderStyle(messsageInputStatus)" name="message" placeholder="Your message" required></textarea>
+                <p [ngClass]="{'d-block': messsageInputStatus === 'notok'}">Your message is empty</p>
+                <img [ngClass]="{'d-block': messsageInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                <img [ngClass]="{'d-block': messsageInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
             </div>
-            <div>
-
+            <div class="agree-container">
+                <img (click)="toggleCheckbox()" [ngClass]="{'d-none': agreedPrivacyPolicy}" src="assets/img/contact_section/checkbox-normal.png" alt="checkbox">
+                <img (click)="toggleCheckbox()" [ngClass]="{'d-none': !agreedPrivacyPolicy}" src="assets/img/contact_section/checkbox-checked.png" alt="checkbox">
+                <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
             </div>
+            <p class="privacy-policy-red">Please accept the privacy policy</p>
+            <button [ngClass]="btnDisabled ? 'btn-disabled' : 'btn-prim'">Send message :)</button>
         </form>
     </div>
 </div>

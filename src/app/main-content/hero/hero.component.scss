@@ -27,13 +27,14 @@ $prim-color-bg: #141D2F;
     }
 }
 
-.right-container {
-    @include dFlex($fd: column, $jc: space-between);
-    height: 260px;
+.name-container {
+    @include dFlex($fd: column, $jc: flex-start);
+    height: 280px;
     z-index: 5;
 
     .title-container {
         @include dFlex();
+        margin-bottom: 44px;
     
         .i-am {
             font-size: 64px;

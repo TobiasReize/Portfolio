@@ -40,7 +40,7 @@ $required-red: #E61C40;
 }
 
 .lower-container {
-    @include dFlex($jc: space-between);
+    @include dFlex($jc: space-between, $ai: flex-start);
 }
 
 .text-container {
@@ -63,9 +63,18 @@ $required-red: #E61C40;
     }
 }
 
+.right-container {
+    @include dFlex($fd: column, $ai: flex-end);
+
+    > a {
+        margin-top: 52px;
+    }
+}
+
 .contact-form {
-    @include dFlex($fd: column);
+    @include dFlex($fd: column, $jc: flex-start);
     width: 600px;
+    height: 600px;
 
     > * {
         width: 100%;
@@ -163,7 +172,7 @@ $required-red: #E61C40;
 
         > p {
             font-size: 14px;
-            line-height: 1;
+            line-height: 1.3;
 
             > a {
                 font-size: 14px;
@@ -178,9 +187,8 @@ $required-red: #E61C40;
 
     .privacy-policy-red {
         font-size: 14px;
-        line-height: 1;
+        line-height: 1.3;
         color: $required-red;
-        visibility: hidden;
     }
 
     .btn-disabled {
@@ -189,14 +197,32 @@ $required-red: #E61C40;
         border-radius: 10px;
         border: unset;
         font-size: 23px;
-        line-height: 1;
+        line-height: 1.2;
         box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
         margin-top: 12px;
         background-color: #B6B6B6;
-        cursor: not-allowed;
     }
 
     .btn-prim {
         width: fit-content;
+        margin-top: 12px;
+    }
+}
+
+.go-up-icon {
+    height: 39px;
+    width: 39px;
+
+    &:hover {
+
+        rect {
+            transition: all 100ms ease-in-out;
+            stroke: $prim-color-green;
+        }
+
+        path {
+            transition: all 100ms ease-in-out;
+            fill: $prim-color-green;
+        }
     }
 }

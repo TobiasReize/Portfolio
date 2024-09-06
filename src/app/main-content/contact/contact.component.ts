@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent implements OnChanges {
+export class ContactComponent {
 
   nameInputStatus: 'ok' | 'notok' | 'empty' = 'empty';
   emailInputStatus: 'ok' | 'notok' | 'empty' = 'empty';
@@ -19,7 +19,7 @@ export class ContactComponent implements OnChanges {
   emailInput: string = '';
   messageInput: string = '';
 
-  agreedPrivacyPolicy = false;
+  agreedPrivacyPolicy: boolean | 'empty' = 'empty';
   btnDisabled = true;
 
 
@@ -49,6 +49,7 @@ export class ContactComponent implements OnChanges {
         }
         break;
     }
+    this.checkButton();
   }
 
 
@@ -67,26 +68,40 @@ export class ContactComponent implements OnChanges {
 
 
   toggleCheckbox() {
-    this.agreedPrivacyPolicy = !this.agreedPrivacyPolicy;    
+    switch (this.agreedPrivacyPolicy) {
+      case 'empty':
+        this.agreedPrivacyPolicy = true;
+        break;
+
+      case false:
+        this.agreedPrivacyPolicy = true;
+        break;
+    
+      case true:
+        this.agreedPrivacyPolicy = false;
+        break;
+    }
+    this.checkButton();
   }
 
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.nameInputStatus === 'ok' && this.emailInputStatus === 'ok' && this.messsageInputStatus === 'ok' && this.agreedPrivacyPolicy) {
+  checkButton() {
+    if (this.nameInputStatus === 'ok' && this.emailInputStatus === 'ok' && this.messsageInputStatus === 'ok' && this.agreedPrivacyPolicy === true) {
       this.btnDisabled = false;
-      console.log('btnDisabled = ', this.btnDisabled);
     } else {
       this.btnDisabled = true;
-      console.log('btnDisabled = ', this.btnDisabled);
     }
   }
 
 
-//   checkButton() {
-//     if (this.nameInputStatus === 'ok' && this.emailInputStatus === 'ok' && this.messsageInputStatus === 'ok' && this.agreedPrivacyPolicy) {
-//       this.btnDisabled = false;
-//     } else {
-//       this.btnDisabled = true;
-//     }
-//   }
+  sendMessage() {
+    if (this.agreedPrivacyPolicy === 'empty') {
+      this.agreedPrivacyPolicy = false;
+    } else if (!this.btnDisabled) {
+      console.log('Message sent!');
+      console.log('btnDisable:', this.btnDisabled);
+    }
+  }
+
+  
 }

@@ -9,32 +9,40 @@
             <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
             <p>Need a Frontend developer? <span>Contact me!</span></p>
         </div>
-        <form class="contact-form">
-            <div class="input-container">
-                <input (click)="checkInput('name', nameInput)" (input)="checkInput('name', nameInput)" [(ngModel)]="nameInput" [ngStyle]="setBorderStyle(nameInputStatus)" type="text" name="name" placeholder="Your name" required>
-                <p [ngClass]="{'d-block': nameInputStatus === 'notok'}">Your name is required</p>
-                <img [ngClass]="{'d-block': nameInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
-                <img [ngClass]="{'d-block': nameInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
-            </div>
-            <div class="input-container">
-                <input (click)="checkInput('email', emailInput)" (input)="checkInput('email', emailInput)" [(ngModel)]="emailInput" [ngStyle]="setBorderStyle(emailInputStatus)" type="email" name="email" placeholder="Your email" required>
-                <p [ngClass]="{'d-block': emailInputStatus === 'notok'}">Your email is required</p>
-                <img [ngClass]="{'d-block': emailInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
-                <img [ngClass]="{'d-block': emailInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
-            </div>
-            <div class="textarea-container">
-                <textarea (click)="checkInput('message', messageInput)" (input)="checkInput('message', messageInput)" [(ngModel)]="messageInput" [ngStyle]="setBorderStyle(messsageInputStatus)" name="message" placeholder="Your message" required></textarea>
-                <p [ngClass]="{'d-block': messsageInputStatus === 'notok'}">Your message is empty</p>
-                <img [ngClass]="{'d-block': messsageInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
-                <img [ngClass]="{'d-block': messsageInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
-            </div>
-            <div class="agree-container">
-                <img (click)="toggleCheckbox()" [ngClass]="{'d-none': agreedPrivacyPolicy}" src="assets/img/contact_section/checkbox-normal.png" alt="checkbox">
-                <img (click)="toggleCheckbox()" [ngClass]="{'d-none': !agreedPrivacyPolicy}" src="assets/img/contact_section/checkbox-checked.png" alt="checkbox">
-                <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
-            </div>
-            <p class="privacy-policy-red">Please accept the privacy policy</p>
-            <button [ngClass]="btnDisabled ? 'btn-disabled' : 'btn-prim'">Send message :)</button>
-        </form>
+        <div class="right-container">
+            <form class="contact-form">
+                <div class="input-container">
+                    <input (click)="checkInput('name', nameInput)" (input)="checkInput('name', nameInput)" [(ngModel)]="nameInput" [ngStyle]="setBorderStyle(nameInputStatus)" type="text" name="name" placeholder="Your name" required>
+                    <p [ngClass]="{'d-block': nameInputStatus === 'notok'}">Your name is required</p>
+                    <img [ngClass]="{'d-block': nameInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                    <img [ngClass]="{'d-block': nameInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                </div>
+                <div class="input-container">
+                    <input (click)="checkInput('email', emailInput)" (input)="checkInput('email', emailInput)" [(ngModel)]="emailInput" [ngStyle]="setBorderStyle(emailInputStatus)" type="email" name="email" placeholder="Your email" required>
+                    <p [ngClass]="{'d-block': emailInputStatus === 'notok'}">Your email is required</p>
+                    <img [ngClass]="{'d-block': emailInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                    <img [ngClass]="{'d-block': emailInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                </div>
+                <div class="textarea-container">
+                    <textarea (click)="checkInput('message', messageInput)" (input)="checkInput('message', messageInput)" [(ngModel)]="messageInput" [ngStyle]="setBorderStyle(messsageInputStatus)" name="message" placeholder="Your message" required></textarea>
+                    <p [ngClass]="{'d-block': messsageInputStatus === 'notok'}">Your message is empty</p>
+                    <img [ngClass]="{'d-block': messsageInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                    <img [ngClass]="{'d-block': messsageInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                </div>
+                <div class="agree-container">
+                    <img (click)="toggleCheckbox()" [ngClass]="{'d-none': agreedPrivacyPolicy === true}" src="assets/img/contact_section/checkbox-normal.png" alt="checkbox">
+                    <img (click)="toggleCheckbox()" [ngClass]="{'d-none': agreedPrivacyPolicy === false || agreedPrivacyPolicy === 'empty'}" src="assets/img/contact_section/checkbox-checked.png" alt="checkbox">
+                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
+                </div>
+                <p [ngStyle]="{visibility: agreedPrivacyPolicy === false ? 'visible' : 'hidden'}" class="privacy-policy-red">Please accept the privacy policy</p>
+                <button (click)="sendMessage()" [ngClass]="btnDisabled ? 'btn-disabled' : 'btn-prim'">Send message :)</button>
+            </form>
+            <a href="#">
+                <svg class="go-up-icon" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2"/>
+                    <path d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z" fill="white"/>
+                </svg>
+            </a>
+        </div>
     </div>
 </div>

@@ -29,7 +29,7 @@ $prim-color-bg: #141D2F;
 
 .name-container {
     @include dFlex($fd: column, $jc: flex-start);
-    height: 280px;
+    height: 270px;
     z-index: 5;
 
     .title-container {

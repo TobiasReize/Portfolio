@@ -18,6 +18,19 @@ $prim-color-bg: #141D2F;
 .name-logo {
     font-size: 40px;
     font-weight: bold;
+
+    > span {
+        font-size: 40px;
+        font-weight: bold
+    }
+
+    .letter-b {
+        color: $prim-color-purple
+    }
+
+    .letter-s {
+        color: $prim-color-green
+    }
 }
 
 nav {

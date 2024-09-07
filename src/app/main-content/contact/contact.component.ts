@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -11,60 +12,26 @@ import { FormsModule } from '@angular/forms';
 })
 export class ContactComponent {
 
-  nameInputStatus: 'ok' | 'notok' | 'empty' = 'empty';
-  emailInputStatus: 'ok' | 'notok' | 'empty' = 'empty';
-  messsageInputStatus: 'ok' | 'notok' | 'empty' = 'empty';
-
-  nameInput: string = '';
-  emailInput: string = '';
-  messageInput: string = '';
-
   agreedPrivacyPolicy: boolean | 'empty' = 'empty';
-  btnDisabled = true;
+  mailTest = true;
+  http = inject(HttpClient);
 
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+  };
 
-  checkInput(id: string, inputData: string) {
-    switch (id) {
-      case 'name':
-        if (inputData.length <= 3) {
-          this.nameInputStatus = 'notok';
-        } else {
-          this.nameInputStatus = 'ok';
-        }
-        break;
-      
-      case 'email':
-        if (inputData.length <= 3) {
-          this.emailInputStatus = 'notok';
-        } else {
-          this.emailInputStatus = 'ok';
-        }
-        break;
-    
-      case 'message':
-        if (inputData.length <= 3) {
-          this.messsageInputStatus = 'notok';
-        } else {
-          this.messsageInputStatus = 'ok';
-        }
-        break;
-    }
-    this.checkButton();
-  }
-
-
-  setBorderStyle(status: string) {
-    switch (status) {
-      case 'ok':
-        return {'border-color': '#70E61C'};
-
-      case 'notok':
-        return {'border-color': '#E61C40'};
-
-      default:
-        return {};
-    }
-  }
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
 
   toggleCheckbox() {
@@ -81,27 +48,27 @@ export class ContactComponent {
         this.agreedPrivacyPolicy = false;
         break;
     }
-    this.checkButton();
   }
 
 
-  checkButton() {
-    if (this.nameInputStatus === 'ok' && this.emailInputStatus === 'ok' && this.messsageInputStatus === 'ok' && this.agreedPrivacyPolicy === true) {
-      this.btnDisabled = false;
-    } else {
-      this.btnDisabled = true;
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            // Hier die Logik für das erfolgreiche Absenden! (--> Daten/ Message in Firebase speichern!)
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {  // Test-Bereich!
+      console.log('Nachricht wurde gesendet!');
+      ngForm.resetForm();
     }
   }
-
-
-  sendMessage() {
-    if (this.agreedPrivacyPolicy === 'empty') {
-      this.agreedPrivacyPolicy = false;
-    } else if (!this.btnDisabled) {
-      console.log('Message sent!');
-      console.log('btnDisable:', this.btnDisabled);
-    }
-  }
-
   
 }

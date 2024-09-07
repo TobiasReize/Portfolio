@@ -24,6 +24,19 @@ $prim-color-bg: #141D2F;
     font-size: 56px;
     font-weight: bold;
     line-height: 1;
+
+    > span {
+        font-size: 56px;
+        font-weight: bold;
+    }
+
+    .letter-b {
+        color: $prim-color-purple
+    }
+
+    .letter-s {
+        color: $prim-color-green
+    }
 }
 
 .copyright {

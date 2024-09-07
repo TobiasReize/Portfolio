@@ -10,32 +10,47 @@
             <p>Need a Frontend developer? <span>Contact me!</span></p>
         </div>
         <div class="right-container">
-            <form class="contact-form">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
                 <div class="input-container">
-                    <input (click)="checkInput('name', nameInput)" (input)="checkInput('name', nameInput)" [(ngModel)]="nameInput" [ngStyle]="setBorderStyle(nameInputStatus)" type="text" name="name" placeholder="Your name" required>
-                    <p [ngClass]="{'d-block': nameInputStatus === 'notok'}">Your name is required</p>
-                    <img [ngClass]="{'d-block': nameInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
-                    <img [ngClass]="{'d-block': nameInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                    <input #name="ngModel" minlength="4" [(ngModel)]="contactData.name" [ngClass]="{'border-ok': name.valid && name.touched, 'border-notok': !name.valid && name.touched}" class="general-input-style" type="text" name="name" id="name" placeholder="Your name" required>
+                    @if (!name.valid && name.touched) {
+                        <p>Your name is required</p>
+                        <img class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok"> 
+                    }
+                    @if (name.valid && name.touched) {
+                        <img class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                    }
                 </div>
                 <div class="input-container">
-                    <input (click)="checkInput('email', emailInput)" (input)="checkInput('email', emailInput)" [(ngModel)]="emailInput" [ngStyle]="setBorderStyle(emailInputStatus)" type="email" name="email" placeholder="Your email" required>
-                    <p [ngClass]="{'d-block': emailInputStatus === 'notok'}">Your email is required</p>
-                    <img [ngClass]="{'d-block': emailInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
-                    <img [ngClass]="{'d-block': emailInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                    <input #email="ngModel" [(ngModel)]="contactData.email" [ngClass]="{'border-ok': email.valid && email.touched, 'border-notok': !email.valid && email.touched}" class="general-input-style" type="email" name="email" id="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                    @if (!email.valid && email.touched) {
+                        <p>Your email is required</p>
+                        <img class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                    }
+                    @if (email.valid && email.touched) {
+                        <img class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                    }
                 </div>
                 <div class="textarea-container">
-                    <textarea (click)="checkInput('message', messageInput)" (input)="checkInput('message', messageInput)" [(ngModel)]="messageInput" [ngStyle]="setBorderStyle(messsageInputStatus)" name="message" placeholder="Your message" required></textarea>
-                    <p [ngClass]="{'d-block': messsageInputStatus === 'notok'}">Your message is empty</p>
-                    <img [ngClass]="{'d-block': messsageInputStatus === 'notok'}" class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
-                    <img [ngClass]="{'d-block': messsageInputStatus === 'ok'}" class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" [ngClass]="{'border-ok': message.valid && message.touched, 'border-notok': !message.valid && message.touched}" class="general-input-style" name="message" id="message" placeholder="Your message" required></textarea>
+                    @if (!message.valid && message.touched) {
+                        <p>Your message is empty</p>
+                        <img class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
+                    }
+                    @if (message.valid && message.touched) {
+                        <img class="icon" src="assets/img/contact_section/ok.png" alt="ok">
+                    }
                 </div>
                 <div class="agree-container">
-                    <img (click)="toggleCheckbox()" [ngClass]="{'d-none': agreedPrivacyPolicy === true}" src="assets/img/contact_section/checkbox-normal.png" alt="checkbox">
-                    <img (click)="toggleCheckbox()" [ngClass]="{'d-none': agreedPrivacyPolicy === false || agreedPrivacyPolicy === 'empty'}" src="assets/img/contact_section/checkbox-checked.png" alt="checkbox">
+                    @if (agreedPrivacyPolicy === true) {
+                        <img (click)="toggleCheckbox()" src="assets/img/contact_section/checkbox-checked.png" alt="checkbox">
+                    } @else {
+                        <img (click)="toggleCheckbox()" src="assets/img/contact_section/checkbox-normal.png" alt="checkbox">
+                    }
                     <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
                 </div>
-                <p [ngStyle]="{visibility: agreedPrivacyPolicy === false ? 'visible' : 'hidden'}" class="privacy-policy-red">Please accept the privacy policy</p>
-                <button (click)="sendMessage()" [ngClass]="btnDisabled ? 'btn-disabled' : 'btn-prim'">Send message :)</button>
+                <p [ngStyle]="{'visibility': agreedPrivacyPolicy === false ? 'visible' : 'hidden'}" class="privacy-policy-red">Please accept the privacy policy</p>
+                <input [disabled]="!name.valid || !email.valid || !message.valid || !(agreedPrivacyPolicy === true)" [ngClass]="{'btn-prim': !submit.disabled}" #submit type="submit" name="submit" id="submit" value="Send message :)">
             </form>
             <a href="#top">
                 <svg class="go-up-icon" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -12,6 +12,7 @@ $prim-color-bg: #141D2F;
 
 :host {
     width: 100%;
+    overflow: hidden;
     @include dFlex($fd: column, $jc: unset);
 }
 

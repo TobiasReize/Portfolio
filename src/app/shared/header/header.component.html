@@ -1,10 +1,8 @@
 <div class="header-content content-wrapper">
-    <a href="#">
-        <div class="name-logo">Tobias</div>
-    </a>
+    <a class="name-logo" href="#top">Tobias</a>
     <nav>
-        <a href="#">About me</a>
-        <a href="#">Skills</a>
-        <a href="#">Portfolio</a>
+        <a (click)="highlightLink('about-me')" [ngClass]="{'link-highlighted': id === 'about-me'}" href="#about_me">About me</a>
+        <a (click)="highlightLink('my-skills')" [ngClass]="{'link-highlighted': id === 'my-skills'}" href="#my_skills">Skills</a>
+        <a (click)="highlightLink('projects')" [ngClass]="{'link-highlighted': id === 'projects'}" href="#projects">Portfolio</a>
     </nav>
 </div>

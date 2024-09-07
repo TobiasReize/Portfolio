@@ -12,7 +12,6 @@ $prim-color-bg: #141D2F;
 
 .header-content {
     @include dFlex($jc: space-between);
-    padding: 37px 0;
     height: 150px;
 }
 
@@ -28,8 +27,9 @@ nav {
     > a {
         font-size: 23px;
         background-position: bottom left;
-        background-size: 55px 3px;
+        background-size: 55px 0px;
         background-repeat: no-repeat;
+        background-image: linear-gradient(to right, $prim-color-purple, $prim-color-purple);
         padding-bottom: 4px;
         transition: all 100ms ease-in;
 
@@ -44,6 +44,7 @@ nav {
     }
 }
 
-.link-underlined {
-    background-image: linear-gradient(to right, $prim-color-purple, $prim-color-purple);
+.link-highlighted {
+    background-size: 55px 3px !important;
+    color: $prim-color-green;
 }

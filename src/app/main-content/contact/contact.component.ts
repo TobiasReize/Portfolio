@@ -22,17 +22,6 @@ export class ContactComponent {
     message: '',
   };
 
-  post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
-
 
   toggleCheckbox() {
     switch (this.agreedPrivacyPolicy) {
@@ -51,13 +40,26 @@ export class ContactComponent {
   }
 
 
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // Hier die Logik für das erfolgreiche Absenden! (--> Daten/ Message in Firebase speichern!)
+            // Hier die Logik für das erfolgreiche Absenden! (--> Daten/ Message als Email senden?!)
+            console.log('Nachricht wurde gesendet!:', this.contactData);
             ngForm.resetForm();
           },
           error: (error) => {
@@ -66,9 +68,10 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {  // Test-Bereich!
-      console.log('Nachricht wurde gesendet!');
+      console.log('Test-Nachricht wurde gesendet!:', this.contactData);
       ngForm.resetForm();
     }
   }
   
+
 }

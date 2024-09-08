@@ -15,7 +15,6 @@ $prim-color-bg: #141D2F;
     min-height: 100vh;
     width: 100%;
     background-color: #141D2F;
-    overflow: hidden;
     padding-bottom: 290px; /* Höhe Footer */
     @include dFlex($fd: column, $jc: flex-start);
 }

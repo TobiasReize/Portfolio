@@ -11,14 +11,6 @@ $required-red: #E61C40;
     align-items: $ai;
 }
 
-// .d-none {
-//     display: none;
-// }
-
-// .d-block {
-//     display: block !important;
-// }
-
 .border-ok {
     border-color: $prim-color-green !important;
 }
@@ -201,14 +193,14 @@ $required-red: #E61C40;
     width: fit-content;
 
     &:disabled {
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: unset;
-    font-size: 23px;
-    line-height: 1.2;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-top: 12px;
-    background-color: #B6B6B6;
+        padding: 15px 30px;
+        border-radius: 10px;
+        border: unset;
+        font-size: 23px;
+        line-height: 1.2;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-top: 12px;
+        background-color: #B6B6B6;
     }
 }
 

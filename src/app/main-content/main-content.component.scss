@@ -12,14 +12,14 @@ $prim-color-bg: #141D2F;
 
 :host {
     width: 100%;
+    padding-top: 150px;
     overflow: hidden;
     @include dFlex($fd: column, $jc: unset);
 }
 
 app-hero {
     width: 100%;
-    height: 100vh;
-    padding-top: 150px;
+    height: calc(100vh - 150px);
     position: relative;
     @include dFlex($fd: column, $jc: unset);
 }

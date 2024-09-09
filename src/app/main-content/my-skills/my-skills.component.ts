@@ -15,5 +15,6 @@ export class MySkillsComponent {
 
   scrollToContact() {
     this.scrollerService.scrollToAnchor('contact');
+    this.scrollerService.scrollId = 'contact';
   }
 }

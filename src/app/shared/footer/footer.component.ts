@@ -15,5 +15,6 @@ export class FooterComponent {
 
   scrollToTop() {
     this.scrollerService.scrollToAnchor('top');
+    this.scrollerService.scrollId = 'top';
   }
 }

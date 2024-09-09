@@ -6,6 +6,8 @@ import { ViewportScroller } from '@angular/common';
 })
 export class ScrollerService {
 
+  scrollId = '';
+
   constructor(private scroller: ViewportScroller) { }
 
   

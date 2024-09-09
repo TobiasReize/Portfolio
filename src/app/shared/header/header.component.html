@@ -1,8 +1,8 @@
 <div class="header-content content-wrapper">
-    <a class="name-logo" href="#top">To<span class="letter-b">b</span>ia<span class="letter-s">s</span></a>
+    <a (click)="scrollToId('top')" class="name-logo">To<span class="letter-b">b</span>ia<span class="letter-s">s</span></a>
     <nav>
-        <a (click)="scrollToId('about_me')" [ngClass]="{'link-highlighted': id === 'about_me'}">About me</a>
-        <a (click)="scrollToId('my_skills')" [ngClass]="{'link-highlighted': id === 'my_skills'}">Skills</a>
-        <a (click)="scrollToId('projects')" [ngClass]="{'link-highlighted': id === 'projects'}">Portfolio</a>
+        <a (click)="scrollToId('about_me')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'about_me'}">About me</a>
+        <a (click)="scrollToId('my_skills')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'my_skills'}">Skills</a>
+        <a (click)="scrollToId('projects')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'projects'}">Portfolio</a>
     </nav>
 </div>

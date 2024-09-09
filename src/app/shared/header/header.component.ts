@@ -11,13 +11,11 @@ import { ScrollerService } from '../service/scroller.service';
 })
 export class HeaderComponent {
 
-  id: string = '';
-
-  constructor(private scrollerService: ScrollerService) { }
+  constructor(public scrollerService: ScrollerService) { }
 
 
   scrollToId(id: string) {
     this.scrollerService.scrollToAnchor(id);
-    this.id = id;
+    this.scrollerService.scrollId = id;
   }
 }

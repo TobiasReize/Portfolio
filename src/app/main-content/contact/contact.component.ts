@@ -28,8 +28,9 @@ export class ContactComponent {
 
   scrollToTop() {
     this.scrollerService.scrollToAnchor('top');
+    this.scrollerService.scrollId = 'top';
   }
-  
+
 
   toggleCheckbox() {
     switch (this.agreedPrivacyPolicy) {
@@ -69,6 +70,7 @@ export class ContactComponent {
             // Hier die Logik für das erfolgreiche Absenden! (--> Daten/ Message als Email senden?!)
             console.log('Nachricht wurde gesendet!:', this.contactData);
             ngForm.resetForm();
+            this.agreedPrivacyPolicy = 'empty';
           },
           error: (error) => {
             console.error(error);
@@ -78,6 +80,7 @@ export class ContactComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {  // Test-Bereich!
       console.log('Test-Nachricht wurde gesendet!:', this.contactData);
       ngForm.resetForm();
+      this.agreedPrivacyPolicy = 'empty';
     }
   }
   

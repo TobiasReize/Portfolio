@@ -15,5 +15,6 @@ export class HeroComponent {
 
   scrollToContact() {
     this.scrollerService.scrollToAnchor('contact');
+    this.scrollerService.scrollId = 'contact';
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollerService } from '../../shared/service/scroller.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -9,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class MySkillsComponent {
 
+  constructor(private scrollerService: ScrollerService) { }
+
+
+  scrollToContact() {
+    this.scrollerService.scrollToAnchor('contact');
+  }
 }

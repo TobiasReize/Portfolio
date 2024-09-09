@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { ScrollerService } from '../../shared/service/scroller.service';
 
 @Component({
   selector: 'app-contact',
@@ -22,6 +23,13 @@ export class ContactComponent {
     message: '',
   };
 
+  constructor(private scrollerService: ScrollerService) { }
+
+
+  scrollToTop() {
+    this.scrollerService.scrollToAnchor('top');
+  }
+  
 
   toggleCheckbox() {
     switch (this.agreedPrivacyPolicy) {

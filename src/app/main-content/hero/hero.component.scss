@@ -15,7 +15,7 @@ $prim-color-bg: #141D2F;
 
     > .hero-profil-bg {
         @include dFlex();
-        background-image: url('/assets/img/hero_section/hero_photo-shadows.png');
+        background-image: url('../../../assets/img/hero_section/hero_photo-shadows.png');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;

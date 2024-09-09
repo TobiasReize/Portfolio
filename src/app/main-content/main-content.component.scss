@@ -19,13 +19,13 @@ $prim-color-bg: #141D2F;
 
 app-hero {
     width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 150px); /* abzüglich Höhe Header*/
     position: relative;
     @include dFlex($fd: column, $jc: unset);
 }
 
 app-about-me {
-    padding-top: 124px;
+    padding-top: 180px;
     width: 100%;
     position: relative;
     @include dFlex();

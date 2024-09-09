@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ScrollerService } from '../service/scroller.service';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,11 @@ export class HeaderComponent {
 
   id: string = '';
 
+  constructor(private scrollerService: ScrollerService) { }
 
-  highlightLink(id: string) {
+
+  scrollToId(id: string) {
+    this.scrollerService.scrollToAnchor(id);
     this.id = id;
   }
-
 }

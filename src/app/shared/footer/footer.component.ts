@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollerService } from '../service/scroller.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  constructor(private scrollerService: ScrollerService) { }
+
+
+  scrollToTop() {
+    this.scrollerService.scrollToAnchor('top');
+  }
 }

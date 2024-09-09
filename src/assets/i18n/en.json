@@ -1,0 +1,46 @@
+{
+    "header_about_me": "About me",
+    "header_skills": "Skills",
+    "header_portfolio": "Portfolio",
+
+    "hero_lets_talk": "Let's talk!",
+    "hero_scroll_down": "Scroll down",
+
+    "about_me_headline": "About me",
+    "about_me_description": "Hi, I'm a german speaking Frontend Developer based in Igersheim. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+    "about_me_location": "Flexible in terms of working environments, I can work effectively both on-site and remotely.",
+    "about_me_bulb": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
+    "about_me_puzzle": "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to reduce complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and realize your visions.",
+
+    "my_skills_headline": "My skills",
+    "my_skills_text": "I have skills in building projects using various frontend technologies and concepts.",
+    "my_skills_subheadline_1": "Looking for ",
+    "my_skills_subheadline_2": "another skill",
+    "my_skills_feel_free": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "my_skills_button": "Get in touch",
+
+    "portfolio_text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+
+    "project_description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "project_description_epl": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "project_description_crm": "coming soon...",
+
+    "contact_headline": "Contact",
+    "contact_question": "Got a problem to solve?",
+    "contact_text": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "contact_last_line_1": "Need a Frontend developer? ",
+    "contact_last_line_2": "Contact me!",
+    "contact_form_name_required": "Your name is required",
+    "contact_form_email_required": "Your email is required",
+    "contact_form_message_required": "Your message is required",
+    "contact_form_pp_text_1": "I've read the ",
+    "contact_form_pp_link": "privacy policy",
+    "contact_form_pp_text_2": " and agree to the processing of my data as outlined.",
+    "contact_form_pp_required": "Please accept the privacy policy",
+    "contact_form_name_placeholder": "Your name",
+    "contact_form_email_placeholder": "Your email",
+    "contact_form_message_placeholder": "Your message",
+    "contact_form_button": "Send message :)",
+
+    "footer_imprint": "Imprint"
+}

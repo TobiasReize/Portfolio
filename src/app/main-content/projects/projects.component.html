@@ -4,7 +4,7 @@
         <h1>Portfolio</h1>
         <div class="vector-portfolio-right"></div>
     </div>
-    <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    <p>{{ 'portfolio_text' | translate }}</p>
 
     <div class="projects-container content-wrapper">
         @for (singleProject of projects; track singleProject; let i = $index) {

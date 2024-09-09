@@ -22,7 +22,7 @@ $prim-color-bg: #141D2F;
     }
 
     img {
-        height: 700px;
+        height: 50vh;
         object-fit: contain;
     }
 }
@@ -67,19 +67,23 @@ $prim-color-bg: #141D2F;
         @include dFlex();
         gap: 32px;
 
-        > img {
+        > a {
+            line-height: 0;
+        }
+
+        > .mail-link {
+            font-size: 23px;
+            line-height: 1;
+        }
+
+        img {
             height: 30px;
             width: 30px;
             transition: all 100ms ease-out;
 
             &:hover {
-                cursor: pointer;
                 scale: 1.3;
             }
-        }
-
-        > a {
-            font-size: 23px;
         }
     }
 
@@ -111,8 +115,9 @@ $prim-color-bg: #141D2F;
 
 .hero-background {
     position: absolute;
-    top: 10vh;
+    bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
+    height: 64vh;
 }

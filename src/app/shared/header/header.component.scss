@@ -57,6 +57,25 @@ nav {
     }
 }
 
+.language-container {
+    @include dFlex();
+    gap: 8px;
+
+    > span {
+        transition: all 100ms ease-in;
+
+        &:hover {
+            cursor: pointer;
+            color: $prim-color-purple;
+        }
+
+        &:active {
+            color: white;
+            transition: none;
+        }
+    } 
+}
+
 .link-highlighted {
     background-size: 55px 3px !important;
     color: $prim-color-green;

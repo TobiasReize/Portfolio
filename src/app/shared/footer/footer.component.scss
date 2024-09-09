@@ -47,12 +47,15 @@ $prim-color-bg: #141D2F;
     @include dFlex();
     gap: 42px;
 
-    > img {
+    > a {
+        line-height: 0;
+    }
+
+    img {
         height: 30px;
         width: 30px;
 
         &:hover {
-            cursor: pointer;
             scale: 1.3;
         }
     }

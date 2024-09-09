@@ -59,11 +59,11 @@
         </div>
     </div>
     <div class="right-container">
-        <h1>My skills</h1>
-        <p>I have gained experience in building projects with different frontend technologies and concepts.</p>
-        <h3>Looking for <span>another skill</span>?</h3>
-        <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-        <button (click)="scrollToContact()" class="btn-prim">Get in touch</button>
+        <h1>{{ 'my_skills_headline' | translate }}</h1>
+        <p>{{ 'my_skills_text' | translate }}</p>
+        <h3>{{ 'my_skills_subheadline_1' | translate }}<span>{{ 'my_skills_subheadline_2' | translate }}</span>?</h3>
+        <p>{{ 'my_skills_feel_free' | translate }}</p>
+        <button (click)="scrollToContact()" class="btn-prim">{{ 'my_skills_button' | translate }}</button>
     </div>
 </div>
 <div class="vector-my-skills"></div>

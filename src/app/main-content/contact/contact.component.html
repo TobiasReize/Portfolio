@@ -1,20 +1,20 @@
 <div class="contact-content">
     <div class="contact-headline">
         <div class="contact-vector"></div>
-        <h1>Contact</h1>
+        <h1>{{ 'contact_headline' | translate }}</h1>
     </div>
     <div class="lower-container content-wrapper">
         <div class="text-container">
-            <h3>Got a problem to solve?</h3>
-            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
-            <p>Need a Frontend developer? <span>Contact me!</span></p>
+            <h3>{{ 'contact_question' | translate }}</h3>
+            <p>{{ 'contact_text' | translate }}</p>
+            <p>{{ 'contact_last_line_1' | translate }}<span>{{ 'contact_last_line_2' | translate }}</span></p>
         </div>
         <div class="right-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
                 <div class="input-container">
-                    <input #name="ngModel" minlength="4" [(ngModel)]="contactData.name" [ngClass]="{'border-ok': name.valid && name.touched, 'border-notok': !name.valid && name.touched}" class="general-input-style" type="text" name="name" id="name" placeholder="Your name" required>
+                    <input #name="ngModel" minlength="4" [(ngModel)]="contactData.name" [ngClass]="{'border-ok': name.valid && name.touched, 'border-notok': !name.valid && name.touched}" class="general-input-style" type="text" name="name" id="name" placeholder="{{ 'contact_form_name_placeholder' | translate }}" required>
                     @if (!name.valid && name.touched) {
-                        <p>Your name is required</p>
+                        <p>{{ 'contact_form_name_required' | translate }}</p>
                         <img class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok"> 
                     }
                     @if (name.valid && name.touched) {
@@ -22,9 +22,9 @@
                     }
                 </div>
                 <div class="input-container">
-                    <input #email="ngModel" [(ngModel)]="contactData.email" [ngClass]="{'border-ok': email.valid && email.touched, 'border-notok': !email.valid && email.touched}" class="general-input-style" type="email" name="email" id="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                    <input #email="ngModel" [(ngModel)]="contactData.email" [ngClass]="{'border-ok': email.valid && email.touched, 'border-notok': !email.valid && email.touched}" class="general-input-style" type="email" name="email" id="email" placeholder="{{ 'contact_form_email_placeholder' | translate }}" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
                     @if (!email.valid && email.touched) {
-                        <p>Your email is required</p>
+                        <p>{{ 'contact_form_email_required' | translate }}</p>
                         <img class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
                     }
                     @if (email.valid && email.touched) {
@@ -32,9 +32,9 @@
                     }
                 </div>
                 <div class="textarea-container">
-                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" [ngClass]="{'border-ok': message.valid && message.touched, 'border-notok': !message.valid && message.touched}" class="general-input-style" name="message" id="message" placeholder="Your message" required></textarea>
+                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" [ngClass]="{'border-ok': message.valid && message.touched, 'border-notok': !message.valid && message.touched}" class="general-input-style" name="message" id="message" placeholder="{{ 'contact_form_message_placeholder' | translate }}" required></textarea>
                     @if (!message.valid && message.touched) {
-                        <p>Your message is empty</p>
+                        <p>{{ 'contact_form_message_required' | translate }}</p>
                         <img class="icon" src="assets/img/contact_section/not-ok.png" alt="not-ok">
                     }
                     @if (message.valid && message.touched) {
@@ -47,10 +47,10 @@
                     } @else {
                         <img (click)="toggleCheckbox()" src="assets/img/contact_section/checkbox-normal.png" alt="checkbox">
                     }
-                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
+                    <p>{{ 'contact_form_pp_text_1' | translate }}<a href="#">{{ 'contact_form_pp_link' | translate }}</a>{{ 'contact_form_pp_text_2' | translate }}</p>
                 </div>
-                <p [ngStyle]="{'visibility': agreedPrivacyPolicy === false ? 'visible' : 'hidden'}" class="privacy-policy-red">Please accept the privacy policy</p>
-                <input [disabled]="!name.valid || !email.valid || !message.valid || !(agreedPrivacyPolicy === true)" [ngClass]="{'btn-prim': !submit.disabled}" #submit type="submit" name="submit" id="submit" value="Send message :)">
+                <p [ngStyle]="{'visibility': agreedPrivacyPolicy === false ? 'visible' : 'hidden'}" class="privacy-policy-red">{{ 'contact_form_pp_required' | translate }}</p>
+                <input [disabled]="!name.valid || !email.valid || !message.valid || !(agreedPrivacyPolicy === true)" [ngClass]="{'btn-prim': !submit.disabled}" #submit type="submit" name="submit" id="submit" value="{{ 'contact_form_button' | translate }}">
             </form>
             <svg (click)="scrollToTop()" class="go-up-icon" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2"/>

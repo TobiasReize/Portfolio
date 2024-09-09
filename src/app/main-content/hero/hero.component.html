@@ -10,18 +10,24 @@
                 <span class="title">FRONTEND DEVELOPER</span>
             </div>
         </div>
-        <button (click)="scrollToContact()" class="btn-prim">Let's talk</button>
+        <button (click)="scrollToContact()" class="btn-prim">{{ 'hero_lets_talk' | translate }}</button>
     </div>
 </div>
 <div class="lower-container content-wrapper">
     <div class="social-media">
-        <img src="assets/img/hero_section/icon-github.png" alt="github">
-        <img src="assets/img/hero_section/icon-mail.png" alt="mail">
-        <img src="assets/img/hero_section/icon-linkedin.png" alt="linkedin">
-        <a href="#">mustermann&#64;gmail.com</a>
+        <a href="https://github.com/TobiasReize" target="_blank">
+            <img src="assets/img/hero_section/icon-github.png" alt="github">
+        </a>
+        <a (click)="scrollToContact()">
+            <img src="assets/img/hero_section/icon-mail.png" alt="mail">
+        </a>
+        <a href="#">
+            <img src="assets/img/hero_section/icon-linkedin.png" alt="linkedin">
+        </a>
+        <a (click)="scrollToContact()" class="mail-link">mustermann&#64;gmail.com</a>
     </div>
     <div class="scroll-down-container">
-        <span>Scroll down</span>
+        <span>{{ 'hero_scroll_down' | translate }}</span>
         <img src="assets/img/hero_section/arrow-scroll-down.png" alt="arrow-scroll-down">
     </div>
     <div class="vector-social-media"></div>

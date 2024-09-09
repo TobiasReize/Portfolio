@@ -1,0 +1,46 @@
+{
+    "header_about_me": "Über mich",
+    "header_skills": "Fähigkeiten",
+    "header_portfolio": "Portfolio",
+
+    "hero_lets_talk": "Lass uns reden!",
+    "hero_scroll_down": "Nach unten",
+
+    "about_me_headline": "Über mich",
+    "about_me_description": "Hi, ich bin ein deutschsprachiger Frontend Entwickler aus Igersheim. Motiviert von den grenzenlosen Möglichkeiten in der IT, freue ich mich visuell ansprechende und intuitive Webseiten und Anwendungen zu gestalten.",
+    "about_me_location": "Da ich hinsichtlich meiner Arbeitsumgebung flexibel bin, kann ich sowohl vor Ort als auch remote effektiv arbeiten.",
+    "about_me_bulb": "Ich bin aufgeschlossen und suche immer nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
+    "about_me_puzzle": "Meiner Wahrnehmung nach geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu reduzieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zu realisieren.",
+
+    "my_skills_headline": "Meine Fähigkeiten",
+    "my_skills_text": "Ich habe Fertigkeiten im Erstellen von Projekten mit verschiedenen Frontend-Technologien und -Konzepten.",
+    "my_skills_subheadline_1": "Auf der Suche nach einer ",
+    "my_skills_subheadline_2": "anderen Fähigkeit",
+    "my_skills_feel_free": "Nehmen Sie gerne Kontakt mit mir auf. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern.",
+    "my_skills_button": "Kontaktieren Sie mich",
+
+    "portfolio_text": "Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+
+    "project_description_join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "project_description_epl": "Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+    "project_description_crm": "coming soon...",
+
+    "contact_headline": "Kontakt",
+    "contact_question": "Sie haben ein Problem zu lösen?",
+    "contact_text": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "contact_last_line_1": "Sie benötigen einen Frontend Entwickler? ",
+    "contact_last_line_2": "Kontaktieren Sie mich!",
+    "contact_form_name_required": "Ihr Name ist erforderlich",
+    "contact_form_email_required": "Ihre Email ist erforderlich",
+    "contact_form_message_required": "Ihre Nachricht ist erforderlich",
+    "contact_form_pp_text_1": "Ich habe die ",
+    "contact_form_pp_link": "Datenschutzrichtlinie",
+    "contact_form_pp_text_2": " gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+    "contact_form_pp_required": "Bitte akzeptieren Sie die Datenschutzrichtlinie",
+    "contact_form_name_placeholder": "Ihr Name",
+    "contact_form_email_placeholder": "Ihre Email",
+    "contact_form_message_placeholder": "Ihre Nachricht",   
+    "contact_form_button": "Nachricht senden :)",
+
+    "footer_imprint": "Impressum"
+}

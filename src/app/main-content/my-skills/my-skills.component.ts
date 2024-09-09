@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ScrollerService } from '../../shared/service/scroller.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })

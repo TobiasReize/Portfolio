@@ -80,3 +80,14 @@ nav {
     background-size: 55px 3px !important;
     color: $prim-color-green;
 }
+
+// Responsive Design:
+@media(max-width: 1000px) {
+    .header-content {
+        height: 100px;
+    }
+    
+    nav {
+        display: none;
+    }
+}

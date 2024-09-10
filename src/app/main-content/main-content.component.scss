@@ -12,7 +12,7 @@ $prim-color-bg: #141D2F;
 
 :host {
     width: 100%;
-    padding-top: 150px;
+    padding-top: 150px; /* Höhe Header*/
     overflow: hidden;
     @include dFlex($fd: column, $jc: unset);
 }
@@ -92,5 +92,15 @@ app-contact {
 
     app-references {
         padding-left: 24px;
+    }
+}
+
+@media(max-width: 1000px) {
+    :host {
+        padding-top: 100px;
+    }
+
+    app-hero {
+        height: calc(100vh - 100px);
     }
 }

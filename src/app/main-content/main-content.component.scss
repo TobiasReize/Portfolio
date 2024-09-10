@@ -74,3 +74,13 @@ app-contact {
         padding-left: calc((100vw - 1920px) / 2);
     }
 }
+
+@media(max-width: 2020px) {
+    app-about-me {
+        padding-left: 50px;
+    }
+
+    app-references {
+        padding-left: 10%;
+    }
+}

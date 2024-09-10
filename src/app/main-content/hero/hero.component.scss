@@ -111,6 +111,7 @@ $prim-color-bg: #141D2F;
     object-fit: cover;
     width: calc((100vw - 2000px) / 2);
     background-color: $prim-color-purple;
+    z-index: 5;
 }
 
 .hero-background {
@@ -120,4 +121,11 @@ $prim-color-bg: #141D2F;
     right: 0;
     width: 100%;
     height: 64vh;
+}
+
+/* Responsive Design:*/
+@media(max-width: 2020px) {
+    .vector-social-media {
+        width: 28px;
+    }
 }

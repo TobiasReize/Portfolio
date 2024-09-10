@@ -16,7 +16,7 @@ $prim-color-bg: #141D2F;
 }
 
 img {
-    height: 400px;
+    width: 500px;
 }
 
 h3 {
@@ -34,6 +34,7 @@ h4 {
 .project-text-container {
     @include dFlex($fd: column, $ai: flex-start);
     width: 500px;
+    padding: 0 20px;
 
     > p {
         line-height: 1.3;

@@ -230,3 +230,10 @@ $required-red: #E61C40;
     bottom: -380px;
     left: -360px;
 }
+
+/* Responsive Design:*/
+@media(max-width: 2020px) {
+    .lower-container {
+        padding: 0 50px;
+    }
+}

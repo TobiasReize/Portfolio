@@ -126,3 +126,10 @@ $prim-color-bg: #141D2F;
     right: -500px;
     transform: scaleX(-1);
 }
+
+/* Responsive Design:*/
+@media(max-width: 2020px) {
+    .references-content {
+        padding-left: 0;
+    }
+}

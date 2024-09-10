@@ -16,7 +16,7 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Join',
-      techstack: 'Angular | TypeScript | HTML | CSS | Firebase',
+      techstack: 'JavaScript | HTML | CSS | Firebase',
       description: 'project_description_join',
       image: 'join.png',
       linkTest: '#',
@@ -40,6 +40,7 @@ export class ProjectsComponent {
     }
   ];
 
+  
   isOdd(index: number):boolean {
     return (index % 2 != 0);
   }

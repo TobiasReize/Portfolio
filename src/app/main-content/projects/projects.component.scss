@@ -10,13 +10,16 @@ $prim-color-bg: #141D2F;
     align-items: $ai;
 }
 
+.padding-l244 {
+    padding-left: 244px;
+}
+
 .portfolio-content {
     @include dFlex($fd: column, $ai: flex-start);
     width: 100%;
     z-index: 5;
 
     > p {
-        padding-left: 244px;
         margin-bottom: 32px;
     }
 }
@@ -26,7 +29,6 @@ $prim-color-bg: #141D2F;
     gap: 32px;
     width: 100%;
     margin-bottom: 40px;
-    padding-left: 244px;
 
     .vector-portfolio-left {
         height: 4px;
@@ -44,7 +46,6 @@ $prim-color-bg: #141D2F;
 .projects-container {
     @include dFlex($fd: column, $ai: flex-start);
     gap: 80px;
-    padding-left: 244px;
 }
 
 .row-reverse {
@@ -57,4 +58,11 @@ $prim-color-bg: #141D2F;
     position: absolute;
     left: -250px;
     top: 900px;
+}
+
+/* Responsive Design:*/
+@media(max-width: 2020px) {
+    .padding-l244 {
+        padding-left: 10%;
+    }
 }

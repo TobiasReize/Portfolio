@@ -1,12 +1,11 @@
 <div class="portfolio-content">
-    <div class="portfolio-headline">
+    <div class="portfolio-headline padding-l244">
         <div class="vector-portfolio-left"></div>
         <h1>Portfolio</h1>
         <div class="vector-portfolio-right"></div>
     </div>
-    <p>{{ 'portfolio_text' | translate }}</p>
-
-    <div class="projects-container content-wrapper">
+    <p class="padding-l244">{{ 'portfolio_text' | translate }}</p>
+    <div class="projects-container content-wrapper padding-l244">
         @for (singleProject of projects; track singleProject; let i = $index) {
             <app-single-project [ngClass]="{'row-reverse': isOdd(i)}" [singleProject]="singleProject" [index]="i"></app-single-project>
         }

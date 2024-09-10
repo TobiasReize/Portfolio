@@ -15,6 +15,7 @@ export class SingleProjectComponent {
   @Input() singleProject!: Project;
   @Input() index!: number;
 
+  
   isOdd(number: number):boolean {
     return (number % 2 != 0);
   }

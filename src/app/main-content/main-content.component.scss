@@ -84,3 +84,13 @@ app-contact {
         padding-left: 10%;
     }
 }
+
+@media(max-width: 1470px) {
+    app-about-me {
+        padding-left: 24px;
+    }
+
+    app-references {
+        padding-left: 24px;
+    }
+}

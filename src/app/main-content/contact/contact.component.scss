@@ -237,3 +237,17 @@ $required-red: #E61C40;
         padding: 0 50px;
     }
 }
+
+@media(max-width: 1470px) {
+    .lower-container {
+        padding: 0 24px;
+    }
+
+    .text-container, .right-container {
+        width: 49%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}

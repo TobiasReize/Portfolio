@@ -133,3 +133,15 @@ $prim-color-bg: #141D2F;
         padding-left: 0;
     }
 }
+
+@media(max-width: 1470px) {
+    .comment-box {
+        width: 50vw;
+        padding: 32px;
+
+        > img {
+            top: -56px;
+            left: -16px;
+        }
+    }
+}

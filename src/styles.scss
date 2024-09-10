@@ -113,3 +113,25 @@ h3 {
     padding: 0 50px;
   }
 }
+
+@media(max-width: 1470px) {
+  .padding-lr50 {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h3 {
+    font-size: 2.2vw;
+  }
+
+  .btn-proj, .btn-snd {
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}

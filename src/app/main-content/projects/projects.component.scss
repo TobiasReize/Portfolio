@@ -66,3 +66,13 @@ $prim-color-bg: #141D2F;
         padding-left: 10%;
     }
 }
+
+@media(max-width: 1470px) {
+    .padding-l244 {
+        padding-left: 24px;
+    }
+
+    .projects-container {
+        padding-right: 24px;
+    }
+}

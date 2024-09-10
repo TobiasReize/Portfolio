@@ -50,3 +50,25 @@ h4 {
 .align-fe {
     align-items: flex-end;
 }
+
+/* Responsive Design:*/
+@media(max-width: 1470px) {
+    :host {
+        width: 100%;
+        gap: unset;
+        justify-content: space-between;
+    }
+
+    h4 {
+        font-size: 2.1vw;
+    }
+
+    .project-text-container {
+        width: 450px;
+        padding: 0 12px;
+    }
+
+    img {
+        width: 450px;
+    }
+}

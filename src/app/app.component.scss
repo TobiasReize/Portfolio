@@ -37,8 +37,7 @@ app-footer {
     left: 0;
     right: 0;
     background-color: $prim-color-bg;
-    z-index: 10;
+    z-index: 5;
     border-top: 4px solid $prim-color-green;
-    overflow: hidden;
     @include dFlex();
 }

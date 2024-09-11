@@ -1,4 +1,11 @@
 <div class="content-wrapper">
+    
+    <div class="view-mobile">
+        <h3>{{ 'my_skills_subheadline_1' | translate }}<span>{{ 'my_skills_subheadline_2' | translate }}</span>?</h3>
+        <p>{{ 'my_skills_feel_free' | translate }}</p>
+        <button (click)="scrollToContact()" class="btn-prim">{{ 'my_skills_button' | translate }}</button>
+    </div>
+    
     <div class="icon-container">
         <div class="skill">
             <img src="assets/img/my-skills_section/html.png" alt="html">
@@ -58,13 +65,15 @@
             <img class="interests" src="assets/img/my-skills_section/interests.png" alt="interests">
         </div>
     </div>
+
     <div class="right-container">
         <h1>{{ 'my_skills_headline' | translate }}</h1>
         <p>{{ 'my_skills_text' | translate }}</p>
-        <h3>{{ 'my_skills_subheadline_1' | translate }}<span>{{ 'my_skills_subheadline_2' | translate }}</span>?</h3>
-        <p>{{ 'my_skills_feel_free' | translate }}</p>
-        <button (click)="scrollToContact()" class="btn-prim">{{ 'my_skills_button' | translate }}</button>
+        <h3 class="hide-mobile">{{ 'my_skills_subheadline_1' | translate }}<span>{{ 'my_skills_subheadline_2' | translate }}</span>?</h3>
+        <p class="hide-mobile">{{ 'my_skills_feel_free' | translate }}</p>
+        <button (click)="scrollToContact()" class="btn-prim hide-mobile">{{ 'my_skills_button' | translate }}</button>
     </div>
+
 </div>
 <div class="vector-my-skills"></div>
 <img class="my-skills-shadow" src="assets/img/my-skills_section/skills_shadow.png" alt="shadow">

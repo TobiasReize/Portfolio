@@ -15,6 +15,10 @@ $prim-color-bg: #141D2F;
     z-index: 5;
 }
 
+.view-mobile {
+    display: none;
+}
+
 .icon-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -195,6 +199,10 @@ h3 {
         }
     }
 
+    .skill-learning {
+        padding: 12px 1vw;
+    }
+
     @keyframes upward2 {
         from {
             gap: 10px;
@@ -221,5 +229,155 @@ h3 {
 
     .vector-my-skills {
         width: 12px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .content-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 32px;
+    }
+
+    h1 {
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        margin-top: 0;
+        text-wrap: pretty;
+
+        span {
+            font-size: 24px;
+        }
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .right-container {
+        width: 450px;
+    }
+
+    .view-mobile {
+        @include dFlex($fd: column, $jc: flex-start, $ai: flex-end);
+        height: 230px;
+        text-align: end;
+
+        > p {
+            margin-bottom: 32px;
+            width: 430px;
+        }
+    }
+
+    .icon-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 450px;
+    }
+
+    .skill, .skill-learning {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: calc(33% - (40px / 3));
+    }
+
+    .vector-my-skills {
+        top: 162px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    h1 {
+        margin-right: 12px;
+    }
+
+    .right-container {
+        width: 100%;
+    }
+
+    .view-mobile {
+        height: 280px;
+
+        > p {
+            width: 100%;
+        }
+    }
+
+    .icon-container {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .skill {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:hover {
+            animation-name: upward3, downward3;
+            animation-duration: 100ms, 300ms;
+            animation-timing-function: ease-in-out, ease-in;
+            animation-delay: 0ms, 200ms;
+            animation-fill-mode: forwards;
+        }
+
+        > img {
+            height: 48px;
+        }
+    }
+
+    .skill-learning {
+        padding-left: 0;
+        padding-right: 0;
+
+        > svg {
+            height: 48px;
+        }
+
+        .interests {
+            height: 120px;
+            top: -85px;
+            left: -20%;
+        }
+    }
+
+    @keyframes upward3 {
+        from {
+            gap: 10px;
+            padding: 12px 0;
+        }
+
+        to {
+            gap: 22px;
+            padding: 0 0 12px 0;
+        }
+    }
+
+    @keyframes downward3 {
+        from {
+            gap: 22px;
+            padding: 0 0 12px 0;
+        }
+        
+        to {
+            gap: 10px;
+            padding: 12px 0;
+        }
+    }
+
+    .vector-my-skills {
+        top: 118px;
+        width: 10px;
+    }
+
+    .my-skills-shadow {
+        height: 750px;
+        left: -520px;
+        top: 400px;
     }
 }

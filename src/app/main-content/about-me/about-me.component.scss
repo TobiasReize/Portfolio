@@ -17,6 +17,7 @@ $prim-color-bg: #141D2F;
 }
 
 .left-container {
+    @include dFlex($fd: column, $ai: flex-start);
     width: 470px;
     margin-right: 150px;
 
@@ -27,24 +28,24 @@ $prim-color-bg: #141D2F;
     > p {
         margin-bottom: 32px;
     }
+}
 
-    .icon-text-container {
-        @include dFlex($jc: flex-start, $ai: flex-start);
-        gap: 25px;
+.icon-text-container {
+    @include dFlex($jc: flex-start, $ai: flex-start);
+    gap: 25px;
 
-        > img {
-            height: 32px;
-            transition: all 100ms ease-out;
+    > img {
+        height: 32px;
+        transition: all 100ms ease-out;
 
-            &:hover {
-                scale: 1.3;
-            }
+        &:hover {
+            scale: 1.3;
         }
     }
+}
 
-    .icon-text-container:nth-child(even) {
-        margin: 24px 0;
-    }
+.icon-text-container:nth-child(even) {
+    margin: 24px 0;
 }
 
 .about-me-img {
@@ -77,5 +78,47 @@ $prim-color-bg: #141D2F;
     .about-me-img {
         width: unset;
         height: 30vw;
+    }
+}
+
+@media(max-width: 1000px) {
+    .about-me-img, .vector-about-me {
+        display: none;
+    }
+
+    .left-container {
+        margin-right: 0;
+
+        h1 {
+            margin-bottom: 32px;
+        }
+
+        > p {
+            margin-bottom: 24px;
+        }
+    }
+
+    .icon-text-container:nth-child(even) {
+        margin: 16px 0;
+    }
+}
+
+@media(max-width: 500px) {
+    .left-container {
+        width: 100%;
+    }
+
+    .icon-text-container {
+        gap: 12px;
+
+        > img {
+            height: 28px;
+        }
+    }
+
+    .about-me-shadow {
+        height: 600px;
+        right: -400px;
+        top: -100px;
     }
 }

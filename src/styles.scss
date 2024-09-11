@@ -140,4 +140,22 @@ h3 {
   h1 {
     font-size: 44px;
   }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media(max-width: 500px) {
+  .padding-lr50 {
+    padding: 0 10px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
 }

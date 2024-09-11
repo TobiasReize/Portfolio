@@ -86,11 +86,7 @@ app-contact {
 }
 
 @media(max-width: 1470px) {
-    app-about-me {
-        padding-left: 24px;
-    }
-
-    app-references {
+    app-about-me, app-references  {
         padding-left: 24px;
     }
 }
@@ -102,5 +98,20 @@ app-contact {
 
     app-hero {
         height: calc(100vh - 100px);
+    }
+
+    app-about-me, app-my-skills, app-projects, app-references, app-contact {
+        padding-top: 140px;
+    }
+}
+
+@media(max-width: 500px) {
+    app-about-me, app-my-skills, app-projects, app-references, app-contact {
+        padding-top: 100px;
+    }
+
+    app-about-me, app-references  {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

@@ -72,7 +72,62 @@ $prim-color-bg: #141D2F;
         padding-left: 24px;
     }
 
+    .portfolio-content {
+        > p {
+            padding-right: 24px;
+        }
+    }
+
     .projects-container {
         padding-right: 24px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .portfolio-headline {
+        margin-bottom: 32px;
+        padding-left: 100px;
+    }
+
+    .row-reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects-container {
+        gap: 32px;
+    }
+
+    .portfolio-shadow {
+        height: 600px;
+        top: 950px
+    }
+}
+
+@media(max-width: 500px) {
+    .portfolio-headline {
+        margin-bottom: 32px;
+        padding-left: 24px;
+        gap: 16px;
+
+        .vector-portfolio-left {
+            width: 50px;
+        }
+    }
+
+    .portfolio-content {
+        > p {
+            padding: 0 10px;
+            text-align: center;
+        }
+    }
+
+    .projects-container {
+        padding: 0 10px;
+    }
+
+    .portfolio-shadow {
+        height: 550px;
+        top: 750px
     }
 }

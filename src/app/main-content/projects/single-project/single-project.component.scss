@@ -72,3 +72,41 @@ h4 {
         width: 450px;
     }
 }
+
+@media(max-width: 1000px) {
+    :host {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project-text-container {
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 23px;
+    }
+
+    .btn-container {
+        width: 100%;
+        gap: unset;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 500px) {
+    img {
+        width: 100%;
+    }
+
+    .project-text-container {
+        width: 100%;
+        padding: 0;
+    }
+}

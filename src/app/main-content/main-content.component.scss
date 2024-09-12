@@ -110,8 +110,16 @@ app-contact {
         padding-top: 100px;
     }
 
-    app-about-me, app-references  {
+    app-about-me {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    app-references {
+        padding-left: 10px;
+    }
+
+    app-contact {
+        padding-bottom: 48px;
     }
 }

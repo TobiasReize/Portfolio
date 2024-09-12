@@ -8,10 +8,12 @@
             </div>
             <img src="assets/img/references_section/quote.png" alt="quote">
         </div>
-        <img class="person-img" src="assets/img/references_section/{{testimonials[currentReviewIndex]['image']}}" alt="person">
-        <!-- <div class="img-person" [ngStyle]="testimonials[currentReviewIndex]['image']"></div> -->
-        <div class="vector-references"></div>
+        <div class="img-vector-container">
+            <img class="person-img" src="assets/img/references_section/{{testimonials[currentReviewIndex]['image']}}" alt="person">
+            <div class="vector-references"></div>
+        </div>
     </div>
+
     <div class="switch-container">
         <img (click)="previousTestimonial()" src="assets/img/references_section/arrow-left.png" alt="arrow-left">
 

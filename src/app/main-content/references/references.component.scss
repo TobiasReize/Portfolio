@@ -63,6 +63,11 @@ $prim-color-bg: #141D2F;
     }
 }
 
+.img-vector-container {
+    @include dFlex();
+    flex: 1;
+}
+
 .person-img {
     height: 270px;
     width: 270px;
@@ -71,17 +76,6 @@ $prim-color-bg: #141D2F;
     border-radius: 50%;
     border: 4px solid $prim-color-purple;
 }
-
-// .img-person {
-//     height: 270px;
-//     width: 270px;
-//     border-radius: 50%;
-//     border: 4px solid $prim-color-purple;
-//     background-position: center;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     transition: all 300ms ease-in-out;
-// }
 
 .vector-references {
     height: 4px;
@@ -143,5 +137,105 @@ $prim-color-bg: #141D2F;
             top: -56px;
             left: -16px;
         }
+    }
+}
+
+@media(max-width: 1000px) {
+    .testimonials-container {
+        flex-direction: column-reverse;
+    }
+
+    .img-vector-container {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 24px;
+    }
+
+    .person-img {
+        width: calc((100vw - 24px) / 3);
+        height: calc((100vw - 24px) / 3);
+        margin-left: auto;
+    }
+
+    .vector-references {
+        flex: unset;
+        width: calc((100vw - 24px) / 3);
+    }
+
+    .comment-box {
+        margin-right: 24px;
+        width: 70vw;
+        height: 250px;
+        padding: 16px;
+
+        > p {
+            font-size: 16px;
+        }
+
+        > img {
+            height: 48px;
+            top: -40px;
+            left: -20px;
+        }
+    }
+
+    .name-container {
+        > p {
+            font-size: 16px;
+        }
+    }
+
+    .references-shadow {
+        height: 700px;
+        top: -250px;
+        right: -400px;
+    }
+}
+
+@media(max-width: 500px) {
+    .person-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .vector-references {
+        width: calc((100vw - 160px) / 2);
+    }
+
+    .comment-box {
+        margin-right: 10px;
+        height: 280px;
+
+        > p {
+            overflow: hidden;
+        }
+
+        > img {
+            height: 40px;
+            top: -30px;
+            left: -18px;
+        }
+    }
+
+    .name-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+
+        > p {
+            line-height: 1.2;
+        }
+
+        .testimonial-vector {
+            flex: unset;
+            width: 100px;
+        }
+    }
+
+    .references-shadow {
+        height: 500px;
+        top: -150px;
+        right: -300px;
     }
 }

@@ -24,6 +24,7 @@ $prim-color-bg: #141D2F;
     font-size: 56px;
     font-weight: bold;
     line-height: 1;
+    cursor: pointer;
 
     > span {
         font-size: 56px;
@@ -72,6 +73,7 @@ $prim-color-bg: #141D2F;
     transition: all 100ms ease-in;
 
     &:hover {
+        cursor: pointer;
         background-image: linear-gradient(to right, $prim-color-green, $prim-color-green);
         background-size: 55px 2px;
     }

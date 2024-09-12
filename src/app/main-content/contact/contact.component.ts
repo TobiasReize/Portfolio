@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ScrollerService } from '../../shared/service/scroller.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -24,7 +25,18 @@ export class ContactComponent {
     message: '',
   };
 
-  constructor(private scrollerService: ScrollerService) { }
+  constructor(private scrollerService: ScrollerService, private router: Router) { }
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
 
   scrollToTop() {
@@ -50,16 +62,10 @@ export class ContactComponent {
   }
 
 
-  post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
+  showPrivacyPolicy() {
+    this.scrollerService.scrollId = '';
+    this.router.navigateByUrl('/privacy-policy/');
+  }
 
 
   onSubmit(ngForm: NgForm) {

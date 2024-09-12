@@ -340,8 +340,8 @@ h3 {
 
         .interests {
             height: 120px;
-            top: -85px;
-            left: -20%;
+            top: -90px;
+            left: 0;
         }
     }
 
@@ -378,5 +378,13 @@ h3 {
         height: 750px;
         left: -520px;
         top: 400px;
+    }
+}
+
+@media(max-width: 390px) {
+    .skill-learning {
+        .interests {
+            left: -20%;
+        }
     }
 }

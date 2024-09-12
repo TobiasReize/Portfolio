@@ -47,7 +47,7 @@
                     } @else {
                         <img (click)="toggleCheckbox()" src="assets/img/contact_section/checkbox-normal.png" alt="checkbox">
                     }
-                    <p>{{ 'contact_form_pp_text_1' | translate }}<a href="#">{{ 'contact_form_pp_link' | translate }}</a>{{ 'contact_form_pp_text_2' | translate }}</p>
+                    <p>{{ 'contact_form_pp_text_1' | translate }}<span (click)="showPrivacyPolicy()">{{ 'contact_form_pp_link' | translate }}</span>{{ 'contact_form_pp_text_2' | translate }}</p>
                 </div>
                 <p [ngStyle]="{'visibility': agreedPrivacyPolicy === false ? 'visible' : 'hidden'}" class="privacy-policy-red">{{ 'contact_form_pp_required' | translate }}</p>
                 <input [disabled]="!name.valid || !email.valid || !message.valid || !(agreedPrivacyPolicy === true)" [ngClass]="{'btn-prim': !submit.disabled}" #submit type="submit" name="submit" id="submit" value="{{ 'contact_form_button' | translate }}">

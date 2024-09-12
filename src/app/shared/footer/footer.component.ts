@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ScrollerService } from '../service/scroller.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -11,11 +12,22 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class FooterComponent {
 
-  constructor(private scrollerService: ScrollerService) { }
+  constructor(private scrollerService: ScrollerService, private router: Router) { }
 
 
   scrollToId(id: string) {
     this.scrollerService.scrollToAnchor(id);
     this.scrollerService.scrollId = id;
+  }
+
+
+  home() {
+    this.router.navigateByUrl('/');
+  }
+
+
+  showImprint() {
+    this.scrollerService.scrollId = '';
+    this.router.navigateByUrl('/imprint/');
   }
 }

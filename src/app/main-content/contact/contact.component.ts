@@ -17,7 +17,7 @@ export class ContactComponent {
 
   agreedPrivacyPolicy: boolean | 'empty' = 'empty';
   mailSent: boolean = false;
-  mailTest = true;
+  mailTest: boolean = true;
   http = inject(HttpClient);
 
   contactData = {
@@ -25,8 +25,6 @@ export class ContactComponent {
     email: '',
     message: '',
   };
-
-  constructor(private scrollerService: ScrollerService, private router: Router) { }
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -38,6 +36,8 @@ export class ContactComponent {
       },
     },
   };
+
+  constructor(private scrollerService: ScrollerService, private router: Router) { }
 
 
   scrollToTop() {

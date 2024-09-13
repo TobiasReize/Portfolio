@@ -101,6 +101,31 @@ ul {
     margin-top: 32px;
 }
 
+.go-up-icon {
+    @include dFlex($jc: flex-end);
+    width: 100%;
+    margin-top: 52px;
+
+    > svg {
+        height: 39px;
+        width: 39px;
+
+        &:hover {
+            cursor: pointer;
+
+            rect {
+                transition: all 100ms ease-in-out;
+                stroke: $prim-color-green;
+            }
+
+            path {
+                transition: all 100ms ease-in-out;
+                fill: $prim-color-green;
+            }
+        }
+    }
+}
+
 /* Responsive Design:*/
 @media(max-width: 1000px) {
     :host {

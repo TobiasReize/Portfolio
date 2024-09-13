@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ScrollerService } from '../service/scroller.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -12,7 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
 
-  burgerMenu = false;
+  burgerMenu: boolean = false;
 
   constructor(public scrollerService: ScrollerService, private translate: TranslateService) { }
 

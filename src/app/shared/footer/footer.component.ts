@@ -21,10 +21,10 @@ export class FooterComponent {
   }
 
 
-  home() {
-    this.router.navigateByUrl('/');
-    // muss aber auch nach oben scrollen wenn man auf der Main-Seite ist!
-  }
+  // home() {
+  //   this.router.navigateByUrl('/');
+  //   // muss aber auch nach oben scrollen wenn man auf der Main-Seite ist!
+  // }
 
 
   showImprint() {

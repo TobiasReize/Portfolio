@@ -10,6 +10,10 @@ $prim-color-bg: #141D2F;
     align-items: $ai;
 }
 
+.d-none {
+    display: none !important;
+}
+
 .header-content {
     @include dFlex($jc: space-between);
     height: 150px;
@@ -160,7 +164,7 @@ nav {
         display: none;
     }
 
-    .burger-menu {
+    .show-burger-menu {
         display: flex;
     }
 }

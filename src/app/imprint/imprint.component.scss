@@ -21,7 +21,7 @@ $prim-color-bg: #141D2F;
     @include dFlex($jc: flex-start);
     gap: 8px;
     width: fit-content;
-    margin-bottom: 32px;
+    margin: 16px 0 32px 0;
 
     > img {
         height: 36px;
@@ -55,26 +55,39 @@ $prim-color-bg: #141D2F;
 h1 {
     font-size: 56px;
     margin-bottom: 40px;
+    text-wrap: wrap;
 }
 
 h2 {
     font-size: 36px;
     font-weight: 700;
-    text-wrap: nowrap;
+    text-wrap: wrap;
     line-height: 1;
     margin-block: 0;
     margin: 32px 0 16px 0;
 }
 
-p {
-    padding-left: 8px;
-    line-height: 2;
-}
-
-.link {
+.source {
     margin-top: 32px;
 
     > a {
         text-decoration: underline;
+    }
+}
+
+/* Responsive Design:*/
+@media(max-width: 1000px) {
+    :host {
+        padding-top: 100px;
+    }
+}
+
+@media(max-width: 500px) {
+    h1 {
+        font-size: 38px;
+    }
+    
+    h2 {
+        font-size: 24px;
     }
 }

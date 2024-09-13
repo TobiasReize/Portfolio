@@ -1,8 +1,67 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
+@mixin dFlex($fd:row, $jc:center, $ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
 :host {
     width: 100%;
     padding-top: 150px;
+    padding-bottom: 120px;
+    @include dFlex();
 }
 
-.privacy-policy-content {
-    width: 100%;
+.home-button {
+    @include dFlex($jc: flex-start);
+    gap: 8px;
+    width: fit-content;
+    margin-bottom: 32px;
+
+    > img {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        border: 2px solid $prim-color-bg;
+        object-fit: contain;
+        cursor: pointer;
+        transition: all 100ms ease-in;
+    }
+
+    > span {
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 100ms ease-in;
+    }
+
+    &:hover img {
+        border: 2px solid $prim-color-green;
+    }
+
+    &:hover span {
+        color: $prim-color-green;
+    }
+
+    &:active span {
+        color: white;
+    }
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-wrap: nowrap;
+    line-height: 1;
+    margin-block: 0;
+    margin: 32px 0 16px 0;
 }

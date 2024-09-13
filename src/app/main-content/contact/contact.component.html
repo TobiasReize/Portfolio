@@ -51,6 +51,7 @@
                 </div>
                 <p [ngStyle]="{'visibility': agreedPrivacyPolicy === false ? 'visible' : 'hidden'}" class="privacy-policy-red">{{ 'contact_form_pp_required' | translate }}</p>
                 <input [disabled]="!name.valid || !email.valid || !message.valid || !(agreedPrivacyPolicy === true)" [ngClass]="{'btn-prim': !submit.disabled}" #submit type="submit" name="submit" id="submit" value="{{ 'contact_form_button' | translate }}">
+                <p [ngStyle]="{'opacity': mailSent === true ? '1' : '0'}" class="mail-sent">{{ 'contact_form_mail_sent' | translate }}</p>
             </form>
             <svg (click)="scrollToTop()" class="go-up-icon" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2"/>

@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 export class ContactComponent {
 
   agreedPrivacyPolicy: boolean | 'empty' = 'empty';
+  mailSent: boolean = false;
   mailTest = true;
   http = inject(HttpClient);
 
@@ -76,8 +77,8 @@ export class ContactComponent {
           next: (response) => {
             // Hier die Logik für das erfolgreiche Absenden! (--> Daten/ Message als Email senden?!)
             console.log('Nachricht wurde gesendet!:', this.contactData);
-            ngForm.resetForm();
-            this.agreedPrivacyPolicy = 'empty';
+            console.log('Response:', response);
+            this.resetContactForm(ngForm);
           },
           error: (error) => {
             console.error(error);
@@ -86,8 +87,17 @@ export class ContactComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {  // Test-Bereich!
       console.log('Test-Nachricht wurde gesendet!:', this.contactData);
-      ngForm.resetForm();
-      this.agreedPrivacyPolicy = 'empty';
+      this.resetContactForm(ngForm);
     }
+  }
+
+
+  resetContactForm(ngForm: NgForm) {
+    ngForm.resetForm();
+    this.agreedPrivacyPolicy = 'empty';
+    this.mailSent = true;
+    setTimeout(() => {
+      this.mailSent = false;
+    }, 3000);
   }
 }

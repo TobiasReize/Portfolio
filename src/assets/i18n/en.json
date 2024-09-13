@@ -40,6 +40,7 @@
     "contact_form_email_placeholder": "Your email",
     "contact_form_message_placeholder": "Your message",
     "contact_form_button": "Send message :)",
+    "contact_form_mail_sent": "Message sent!",
 
     "footer_imprint": "Legal Notice"
 }

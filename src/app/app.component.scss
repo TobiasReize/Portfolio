@@ -15,7 +15,7 @@ $prim-color-bg: #141D2F;
     min-height: 100vh;
     width: 100%;
     background-color: #141D2F;
-    padding-bottom: 290px; /* Höhe Footer */
+    padding-bottom: 200px; /* Höhe Footer */
     @include dFlex($fd: column, $jc: flex-start);
 }
 
@@ -40,4 +40,11 @@ app-footer {
     z-index: 5;
     border-top: 4px solid $prim-color-green;
     @include dFlex();
+}
+
+// Responsive Design:
+@media(max-width: 1000px) {
+    .app-wrapper {
+        padding-bottom: 250px;
+    }
 }

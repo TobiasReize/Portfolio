@@ -1,9 +1,9 @@
 <div class="header-content content-wrapper">
     <a (click)="scrollToId('top')" class="name-logo">To<span class="letter-b">b</span>ia<span class="letter-s">s</span></a>
-    <nav [ngClass]="{'d-none': !scrollerService.homepage}">
-        <a (click)="scrollToId('about_me')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'about_me'}" class="nav-link">{{ 'header_about_me' | translate }}</a>
-        <a (click)="scrollToId('my_skills')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'my_skills'}" class="nav-link">{{ 'header_skills' | translate }}</a>
-        <a (click)="scrollToId('projects')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'projects'}" class="nav-link">Portfolio</a>
+    <nav [ngClass]="{'d-none': !portfolioService.homepage}">
+        <a (click)="scrollToId('about_me')" [ngClass]="{'link-highlighted': portfolioService.scrollId === 'about_me'}" class="nav-link">{{ 'header_about_me' | translate }}</a>
+        <a (click)="scrollToId('my_skills')" [ngClass]="{'link-highlighted': portfolioService.scrollId === 'my_skills'}" class="nav-link">{{ 'header_skills' | translate }}</a>
+        <a (click)="scrollToId('projects')" [ngClass]="{'link-highlighted': portfolioService.scrollId === 'projects'}" class="nav-link">Portfolio</a>
         <div class="language-container">
             <span (click)="useLanguage('de')">DE</span>
             |
@@ -12,7 +12,7 @@
     </nav>
 
     <!-- Burger menu button (mobile): -->
-    <button (click)="showBurgerMenu()" [ngClass]="{'show-burger-menu': scrollerService.homepage}" class="burger-menu">
+    <button (click)="showBurgerMenu()" [ngClass]="{'show-burger-menu': portfolioService.homepage}" class="burger-menu">
         <div [ngClass]="{'top': burgerMenu}" class="line"></div>
         <div [ngClass]="{'middle': burgerMenu}" class="line"></div>
         <div [ngClass]="{'bottom': burgerMenu}" class="line"></div>
@@ -27,9 +27,9 @@
         <span (click)="useLanguage('en')">EN</span>
     </div>
     <div class="menu-links-container">
-        <a (click)="scrollToId('about_me')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'about_me'}" class="nav-link">{{ 'header_about_me' | translate }}</a>
-        <a (click)="scrollToId('my_skills')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'my_skills'}" class="nav-link">{{ 'header_skills' | translate }}</a>
-        <a (click)="scrollToId('projects')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'projects'}" class="nav-link">Portfolio</a>
-        <a (click)="scrollToId('contact')" [ngClass]="{'link-highlighted': scrollerService.scrollId === 'contact'}" class="nav-link">{{ 'header_menu_contact' | translate }}</a>
+        <a (click)="scrollToId('about_me')" [ngClass]="{'link-highlighted': portfolioService.scrollId === 'about_me'}" class="nav-link">{{ 'header_about_me' | translate }}</a>
+        <a (click)="scrollToId('my_skills')" [ngClass]="{'link-highlighted': portfolioService.scrollId === 'my_skills'}" class="nav-link">{{ 'header_skills' | translate }}</a>
+        <a (click)="scrollToId('projects')" [ngClass]="{'link-highlighted': portfolioService.scrollId === 'projects'}" class="nav-link">Portfolio</a>
+        <a (click)="scrollToId('contact')" [ngClass]="{'link-highlighted': portfolioService.scrollId === 'contact'}" class="nav-link">{{ 'header_menu_contact' | translate }}</a>
     </div>
 </div>

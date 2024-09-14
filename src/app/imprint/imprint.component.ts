@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ScrollerService } from '../shared/service/scroller.service';
+import { PortfolioService } from '../shared/service/portfolio.service';
 
 @Component({
   selector: 'app-imprint',
@@ -11,7 +11,7 @@ import { ScrollerService } from '../shared/service/scroller.service';
 })
 export class ImprintComponent implements OnInit {
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private scrollerService: ScrollerService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private portfolioService: PortfolioService) { }
 
 
   ngOnInit(): void {
@@ -24,10 +24,10 @@ export class ImprintComponent implements OnInit {
     if (currentUrl.length > 0) {
       let currentPath = currentUrl[0].path;
       if (currentPath === 'imprint' || currentPath === 'privacy-policy') {
-        this.scrollerService.homepage = false;
+        this.portfolioService.homepage = false;
       }
     } else {
-      this.scrollerService.homepage = true;
+      this.portfolioService.homepage = true;
     }
   }
 

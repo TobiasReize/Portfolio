@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ScrollerService } from '../shared/service/scroller.service';
+import { PortfolioService } from '../shared/service/portfolio.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -11,7 +11,7 @@ import { ScrollerService } from '../shared/service/scroller.service';
 })
 export class PrivacyPolicyComponent implements OnInit {
 
-  constructor(private scrollerService: ScrollerService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private portfolioService: PortfolioService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
 
   ngOnInit(): void {
@@ -24,10 +24,10 @@ export class PrivacyPolicyComponent implements OnInit {
     if (currentUrl.length > 0) {
       let currentPath = currentUrl[0].path;
       if (currentPath === 'imprint' || currentPath === 'privacy-policy') {
-        this.scrollerService.homepage = false;
+        this.portfolioService.homepage = false;
       }
     } else {
-      this.scrollerService.homepage = true;
+      this.portfolioService.homepage = true;
     }
   }
 
@@ -38,7 +38,7 @@ export class PrivacyPolicyComponent implements OnInit {
 
 
   scrollToTop() {
-    this.scrollerService.scrollToAnchor('top');
-    this.scrollerService.scrollId = 'top';
+    this.portfolioService.scrollToAnchor('top');
+    this.portfolioService.scrollId = 'top';
   }
 }

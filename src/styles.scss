@@ -39,6 +39,24 @@ h3 {
   margin-block: 0;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(20, 29, 47, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: $prim-color-purple;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ac6cff;
+}
+
 .btn {
     border: unset;
     border-radius: 10px;

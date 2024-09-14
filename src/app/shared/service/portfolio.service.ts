@@ -4,7 +4,7 @@ import { ViewportScroller } from '@angular/common';
 @Injectable({
   providedIn: 'root'
 })
-export class ScrollerService {
+export class PortfolioService {
 
   scrollId: string = '';
   homepage: boolean = true;

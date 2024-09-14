@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { ScrollerService } from '../service/scroller.service';
+import { Component } from '@angular/core';
+import { PortfolioService } from '../service/portfolio.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -14,12 +14,12 @@ export class HeaderComponent {
 
   burgerMenu: boolean = false;
 
-  constructor(public scrollerService: ScrollerService, private translate: TranslateService) { }
+  constructor(public portfolioService: PortfolioService, private translate: TranslateService) { }
 
 
   scrollToId(id: string) {
-    this.scrollerService.scrollToAnchor(id);
-    this.scrollerService.scrollId = id;
+    this.portfolioService.scrollToAnchor(id);
+    this.portfolioService.scrollId = id;
     this.burgerMenu = false;
     document.body.style.overflow = 'unset'
   }

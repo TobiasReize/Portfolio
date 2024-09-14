@@ -5,7 +5,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ReferencesComponent } from './references/references.component';
 import { ContactComponent } from './contact/contact.component';
-import { ScrollerService } from '../shared/service/scroller.service';
+import { PortfolioService } from '../shared/service/portfolio.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -18,7 +18,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MainContentComponent implements OnInit {
 
 
-  constructor(public scrollerService: ScrollerService, private activatedRoute: ActivatedRoute) { }
+  constructor(public portfolioService: PortfolioService, private activatedRoute: ActivatedRoute) { }
 
 
   ngOnInit(): void {
@@ -31,10 +31,10 @@ export class MainContentComponent implements OnInit {
     if (currentUrl.length > 0) {
       let currentPath = currentUrl[0].path;
       if (currentPath === 'imprint' || currentPath === 'privacy-policy') {
-        this.scrollerService.homepage = false;
+        this.portfolioService.homepage = false;
       }
     } else {
-      this.scrollerService.homepage = true;
+      this.portfolioService.homepage = true;
     }
   }
 }

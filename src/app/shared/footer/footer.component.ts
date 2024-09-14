@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScrollerService } from '../service/scroller.service';
+import { PortfolioService } from '../service/portfolio.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 
@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
 
-  constructor(private scrollerService: ScrollerService, private router: Router) { }
+  constructor(private portfolioService: PortfolioService, private router: Router) { }
 
 
   scrollToId(id: string) {
-    this.scrollerService.scrollToAnchor(id);
-    this.scrollerService.scrollId = id;
+    this.portfolioService.scrollToAnchor(id);
+    this.portfolioService.scrollId = id;
   }
 
 
@@ -28,7 +28,7 @@ export class FooterComponent {
 
 
   showImprint() {
-    this.scrollerService.scrollId = '';
+    this.portfolioService.scrollId = '';
     this.router.navigateByUrl('/imprint/');
   }
 }

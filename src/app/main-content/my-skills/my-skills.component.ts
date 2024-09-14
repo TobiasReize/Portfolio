@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScrollerService } from '../../shared/service/scroller.service';
+import { PortfolioService } from '../../shared/service/portfolio.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -11,11 +11,11 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class MySkillsComponent {
 
-  constructor(private scrollerService: ScrollerService) { }
+  constructor(private portfolioService: PortfolioService) { }
 
 
   scrollToContact() {
-    this.scrollerService.scrollToAnchor('contact');
-    this.scrollerService.scrollId = 'contact';
+    this.portfolioService.scrollToAnchor('contact');
+    this.portfolioService.scrollId = 'contact';
   }
 }

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { ScrollerService } from '../../shared/service/scroller.service';
+import { PortfolioService } from '../../shared/service/portfolio.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 
@@ -37,12 +37,12 @@ export class ContactComponent {
     },
   };
 
-  constructor(private scrollerService: ScrollerService, private router: Router) { }
+  constructor(private portfolioService: PortfolioService, private router: Router) { }
 
 
   scrollToTop() {
-    this.scrollerService.scrollToAnchor('top');
-    this.scrollerService.scrollId = 'top';
+    this.portfolioService.scrollToAnchor('top');
+    this.portfolioService.scrollId = 'top';
   }
 
 
@@ -64,7 +64,7 @@ export class ContactComponent {
 
 
   showPrivacyPolicy() {
-    this.scrollerService.scrollId = '';
+    this.portfolioService.scrollId = '';
     this.router.navigateByUrl('/privacy-policy/');
   }
 

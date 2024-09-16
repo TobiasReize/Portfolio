@@ -65,7 +65,7 @@ export class ContactComponent {
 
   showPrivacyPolicy() {
     this.portfolioService.scrollId = '';
-    this.router.navigateByUrl('/privacy-policy/');
+    this.router.navigateByUrl('privacy-policy');
   }
 
 

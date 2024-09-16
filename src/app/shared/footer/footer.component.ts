@@ -48,6 +48,6 @@ export class FooterComponent {
 
   showImprint() {
     this.portfolioService.scrollId = '';
-    this.router.navigateByUrl('/imprint/');
+    this.router.navigateByUrl('imprint');
   }
 }

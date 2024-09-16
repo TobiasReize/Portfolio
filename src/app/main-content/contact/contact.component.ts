@@ -17,7 +17,7 @@ export class ContactComponent {
 
   agreedPrivacyPolicy: boolean | 'empty' = 'empty';
   mailSent: boolean = false;
-  mailTest: boolean = true;
+  mailTest: boolean = false;
   http = inject(HttpClient);
 
   contactData = {
@@ -75,13 +75,12 @@ export class ContactComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // Hier die Logik für das erfolgreiche Absenden! (--> Daten/ Message als Email senden?!)
             console.log('Nachricht wurde gesendet!:', this.contactData);
             console.log('Response:', response);
             this.resetContactForm(ngForm);
           },
           error: (error) => {
-            console.error(error);
+            console.error('Error aufgetreten:' ,error);
           },
           complete: () => console.info('send post complete'),
         });

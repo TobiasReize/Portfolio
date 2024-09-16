@@ -85,8 +85,10 @@ h4 {
 }
 
 a {
-    text-decoration: underline;
     word-break: break-all;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 ul {

@@ -75,6 +75,10 @@ $prim-color-bg: #141D2F;
     > .mail-link {
         font-size: 23px;
         line-height: 1;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     img {

@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../service/portfolio.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +12,26 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
 
-  constructor(private portfolioService: PortfolioService, private router: Router) { }
+  constructor(private portfolioService: PortfolioService, private router: Router, private activatedRoute: ActivatedRoute) { }
+
+
+  // ngOnInit(): void {
+  //   this.checkCurrentPath();
+  // }
+
+
+  // checkCurrentPath() {
+  //   let currentUrl = this.activatedRoute.snapshot.url;
+  //   if (currentUrl.length > 0) {
+  //     let currentPath = currentUrl[0].path;
+  //     if (currentPath === 'imprint' || currentPath === 'privacy-policy') {
+  //       console.log('Not Homepage:', currentPath);
+  //     }
+  //   } else {
+  //     console.log('Homepage');
+      
+  //   }
+  // }
 
 
   scrollToId(id: string) {
@@ -21,9 +40,9 @@ export class FooterComponent {
   }
 
 
-  // home() {
+  // goToContact() {
   //   this.router.navigateByUrl('/');
-  //   // muss aber auch nach oben scrollen wenn man auf der Main-Seite ist!
+  //   this.portfolioService.scrollId = 'contact';
   // }
 
 

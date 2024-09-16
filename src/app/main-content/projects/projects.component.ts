@@ -20,7 +20,7 @@ export class ProjectsComponent {
       description: 'project_description_join',
       image: 'join.png',
       linkTest: '#',
-      linkGithub: '#'
+      linkGithub: 'https://github.com/TobiasReize/Join-200.git'
     },
     {
       title: 'El Pollo Loco',
@@ -28,7 +28,7 @@ export class ProjectsComponent {
       description: 'project_description_epl',
       image: 'el-pollo-loco.png',
       linkTest: '#',
-      linkGithub: '#'
+      linkGithub: 'https://github.com/TobiasReize/El-Pollo-Loco.git'
     },
     {
       title: 'Simple CRM',

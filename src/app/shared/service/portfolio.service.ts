@@ -12,6 +12,10 @@ export class PortfolioService {
   constructor(private scroller: ViewportScroller) { }
 
   
+  /**
+   * Scrolls to the corresponding id.
+   * @param id - id of the section.
+   */
   scrollToAnchor(id: string) {
     this.scroller.scrollToAnchor(id);
   }

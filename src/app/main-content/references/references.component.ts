@@ -31,6 +31,9 @@ export class ReferencesComponent {
   ];
 
 
+  /**
+   * Switches to the next testimonial.
+   */
   nextTestimonial() {
     if ((this.currentReviewIndex + 1) >= this.testimonials.length) {
       this.currentReviewIndex = 0;
@@ -40,6 +43,9 @@ export class ReferencesComponent {
   }
 
 
+  /**
+   * Switches to the previous testimonial.
+   */
   previousTestimonial() {
     if ((this.currentReviewIndex - 1) < 0) {
       this.currentReviewIndex = this.testimonials.length - 1;

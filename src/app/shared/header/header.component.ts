@@ -17,6 +17,10 @@ export class HeaderComponent {
   constructor(public portfolioService: PortfolioService, private translate: TranslateService) { }
 
 
+  /**
+   * Scrolls to the corresponding id and closes the burger menu overlay for mobiles.
+   * @param id - id of the section.
+   */
   scrollToId(id: string) {
     this.portfolioService.scrollToAnchor(id);
     this.portfolioService.scrollId = id;
@@ -25,6 +29,10 @@ export class HeaderComponent {
   }
 
 
+  /**
+   * Translates the text.
+   * @param lang - de for german or en for english.
+   */
   useLanguage(lang: string) {
     this.translate.use(lang);
     this.burgerMenu = false;
@@ -32,7 +40,10 @@ export class HeaderComponent {
   }
 
 
-  showBurgerMenu() {
+  /**
+   * Shows the burger menu overlay for mobiles and prevents body from scrolling.
+   */
+  showBurgerMenuOverlay() {
     this.burgerMenu = !this.burgerMenu;
     if (this.burgerMenu) {
       document.body.style.overflow = 'hidden'

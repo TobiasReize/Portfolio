@@ -23,6 +23,9 @@ export class MainContentComponent implements OnInit {
   constructor(public portfolioService: PortfolioService, private activatedRoute: ActivatedRoute) { }
 
 
+  /**
+   * Calls the checkCurrentPath function and initialize the animation-on-scroll options.
+   */
   ngOnInit(): void {
     this.checkCurrentPath();
 
@@ -35,6 +38,9 @@ export class MainContentComponent implements OnInit {
   }
 
 
+  /**
+   * Checks the current path to toggle a service variable to display the navbar.
+   */
   checkCurrentPath() {
     let currentUrl = this.activatedRoute.snapshot.url;
     if (currentUrl.length > 0) {

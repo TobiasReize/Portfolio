@@ -19,6 +19,9 @@ export class PrivacyPolicyComponent implements OnInit {
   }
 
 
+  /**
+   * Checks the current path to toggle a service variable to display the navbar.
+   */
   checkCurrentPath() {
     let currentUrl = this.activatedRoute.snapshot.url;
     if (currentUrl.length > 0) {
@@ -32,11 +35,17 @@ export class PrivacyPolicyComponent implements OnInit {
   }
 
 
+  /**
+   * Navigate to homepage.
+   */
   home() {
     this.router.navigateByUrl('/');
   }
 
 
+  /**
+   * Scrolls to the top.
+   */
   scrollToTop() {
     this.portfolioService.scrollToAnchor('top');
     this.portfolioService.scrollId = 'top';

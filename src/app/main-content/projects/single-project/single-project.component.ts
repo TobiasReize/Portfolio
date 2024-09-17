@@ -16,6 +16,10 @@ export class SingleProjectComponent {
   @Input() index!: number;
 
   
+  /**
+   * Checks whether the number is odd or even and returns a boolean value.
+   * @param number - index of the project.
+   */
   isOdd(number: number):boolean {
     return (number % 2 != 0);
   }

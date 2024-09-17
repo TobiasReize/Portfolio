@@ -19,6 +19,9 @@ export class ImprintComponent implements OnInit {
   }
 
 
+  /**
+   * Checks the current path to toggle a service variable to display the navbar.
+   */
   checkCurrentPath() {
     let currentUrl = this.activatedRoute.snapshot.url;
     if (currentUrl.length > 0) {
@@ -32,6 +35,9 @@ export class ImprintComponent implements OnInit {
   }
 
 
+  /**
+   * Navigate to homepage.
+   */
   home() {
     this.router.navigateByUrl('/');    
   }

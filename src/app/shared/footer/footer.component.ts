@@ -15,12 +15,19 @@ export class FooterComponent {
   constructor(private portfolioService: PortfolioService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
 
+  /**
+   * Scrolls to the corresponding id.
+   * @param id - id of the section.
+   */
   scrollToId(id: string) {
     this.portfolioService.scrollToAnchor(id);
     this.portfolioService.scrollId = id;
   }
 
 
+  /**
+   * Navigates to imprint.
+   */
   showImprint() {
     this.portfolioService.scrollId = '';
     this.router.navigateByUrl('imprint');

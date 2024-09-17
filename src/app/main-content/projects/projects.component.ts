@@ -41,6 +41,10 @@ export class ProjectsComponent {
   ];
 
   
+  /**
+   * Checks whether the number is odd or even and returns a boolean value.
+   * @param number - index of the project.
+   */
   isOdd(index: number):boolean {
     return (index % 2 != 0);
   }

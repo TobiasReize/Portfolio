@@ -40,12 +40,18 @@ export class ContactComponent {
   constructor(private portfolioService: PortfolioService, private router: Router) { }
 
 
+  /**
+   * Scrolls to the top.
+   */
   scrollToTop() {
     this.portfolioService.scrollToAnchor('top');
     this.portfolioService.scrollId = 'top';
   }
 
 
+  /**
+   * Toggle a boolean value to show the correct checkbox icon.
+   */
   toggleCheckbox() {
     switch (this.agreedPrivacyPolicy) {
       case 'empty':
@@ -63,12 +69,19 @@ export class ContactComponent {
   }
 
 
+  /**
+   * Navigates to the privacy policy and resets a service variable for the viewport scroller.
+   */
   showPrivacyPolicy() {
     this.portfolioService.scrollId = '';
     this.router.navigateByUrl('privacy-policy');
   }
 
 
+  /**
+   * Executes the submit process of the HTML form and sends the mail.
+   * @param ngForm - reference of the HTML form element.
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
@@ -89,6 +102,10 @@ export class ContactComponent {
   }
 
 
+  /**
+   * Resets the input fields of the HTML form element.
+   * @param ngForm - reference of the HTML form element.
+   */
   resetContactForm(ngForm: NgForm) {
     ngForm.resetForm();
     this.agreedPrivacyPolicy = 'empty';

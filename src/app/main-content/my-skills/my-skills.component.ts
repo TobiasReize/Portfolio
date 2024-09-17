@@ -14,6 +14,9 @@ export class MySkillsComponent {
   constructor(private portfolioService: PortfolioService) { }
 
 
+  /**
+   * Scrolls to the contact section.
+   */
   scrollToContact() {
     this.portfolioService.scrollToAnchor('contact');
     this.portfolioService.scrollId = 'contact';

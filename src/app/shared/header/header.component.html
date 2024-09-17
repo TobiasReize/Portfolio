@@ -12,7 +12,7 @@
     </nav>
 
     <!-- Burger menu button (mobile): -->
-    <button (click)="showBurgerMenu()" [ngClass]="{'show-burger-menu': portfolioService.homepage}" class="burger-menu">
+    <button (click)="showBurgerMenuOverlay()" [ngClass]="{'show-burger-menu': portfolioService.homepage}" class="burger-menu">
         <div [ngClass]="{'top': burgerMenu}" class="line"></div>
         <div [ngClass]="{'middle': burgerMenu}" class="line"></div>
         <div [ngClass]="{'bottom': burgerMenu}" class="line"></div>

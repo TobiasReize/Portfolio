@@ -29,14 +29,6 @@ export class ProjectsComponent {
       image: 'el-pollo-loco.png',
       linkTest: 'https://epl.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/El-Pollo-Loco.git'
-    },
-    {
-      title: 'Next project...',
-      techstack: '',
-      description: 'project_description_crm',
-      image: 'simple-crm.png',
-      linkTest: '',
-      linkGithub: ''
     }
   ];
 

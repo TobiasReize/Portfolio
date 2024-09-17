@@ -56,8 +56,8 @@ $prim-color-bg: #141D2F;
 .portfolio-shadow {
     height: 930px;
     position: absolute;
-    left: -250px;
-    top: 900px;
+    left: -350px;
+    top: 300px;
 }
 
 /* Responsive Design:*/
@@ -100,7 +100,8 @@ $prim-color-bg: #141D2F;
 
     .portfolio-shadow {
         height: 600px;
-        top: 950px
+        top: 950px;
+        left: -250px;
     }
 }
 

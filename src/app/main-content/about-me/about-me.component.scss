@@ -89,6 +89,7 @@ $prim-color-bg: #141D2F;
 
     .left-container {
         margin-right: 0;
+        width: 100%;
 
         h1 {
             margin-bottom: 32px;
@@ -105,10 +106,6 @@ $prim-color-bg: #141D2F;
 }
 
 @media(max-width: 500px) {
-    .left-container {
-        width: 100%;
-    }
-
     .icon-text-container {
         gap: 12px;
 

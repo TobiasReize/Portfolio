@@ -103,6 +103,10 @@ app-contact {
     app-about-me, app-my-skills, app-projects, app-references, app-contact {
         padding-top: 140px;
     }
+
+    app-about-me {
+        padding-right: 24px;
+    }
 }
 
 @media(max-width: 500px) {

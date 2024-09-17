@@ -38,6 +38,7 @@ $prim-color-bg: #141D2F;
     > span {
         font-weight: 700;
         text-align: center;
+        line-height: 1.3;
     }
 
     &:hover {
@@ -91,7 +92,7 @@ $prim-color-bg: #141D2F;
     span {
         color: $prim-color-purple;
         font-weight: 700;
-        line-height: 1.2;
+        line-height: 1.3;
         text-align: center;
         transition: all 300ms ease-out;
     }
@@ -236,7 +237,7 @@ h3 {
     .content-wrapper {
         flex-direction: column-reverse;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         gap: 32px;
     }
 
@@ -247,6 +248,8 @@ h3 {
     h3 {
         margin-top: 0;
         text-wrap: pretty;
+        text-align: end;
+        width: 100%;
 
         span {
             font-size: 24px;
@@ -258,17 +261,19 @@ h3 {
     }
 
     .right-container {
-        width: 450px;
+        width: 100%;
+        align-items: flex-end;
     }
 
     .view-mobile {
-        @include dFlex($fd: column, $jc: flex-start, $ai: flex-end);
+        @include dFlex($fd: column, $jc: flex-start, $ai: center);
         height: 230px;
-        text-align: end;
+        width: 100%;
 
         > p {
             margin-bottom: 32px;
-            width: 430px;
+            text-align: end;
+            width: 100%;
         }
     }
 
@@ -296,16 +301,8 @@ h3 {
         margin-right: 12px;
     }
 
-    .right-container {
-        width: 100%;
-    }
-
     .view-mobile {
         height: 280px;
-
-        > p {
-            width: 100%;
-        }
     }
 
     .icon-container {

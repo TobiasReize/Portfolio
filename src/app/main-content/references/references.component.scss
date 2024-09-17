@@ -19,7 +19,7 @@ $prim-color-bg: #141D2F;
 }
 
 .testimonials-container {
-    @include dFlex();
+    @include dFlex($jc: flex-start);
     width: 100%;
 }
 
@@ -87,6 +87,7 @@ $prim-color-bg: #141D2F;
     @include dFlex();
     gap: 20px;
     width: 100%;
+    max-width: calc(1920px - 244px);
 
     > img {
         height: 40px;
@@ -116,7 +117,7 @@ $prim-color-bg: #141D2F;
 .references-shadow {
     height: 950px;
     position: absolute;
-    top: -400px;
+    top: -200px;
     right: -500px;
     transform: scaleX(-1);
 }

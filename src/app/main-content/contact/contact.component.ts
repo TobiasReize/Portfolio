@@ -75,8 +75,6 @@ export class ContactComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log('Nachricht wurde gesendet!:', this.contactData);
-            console.log('Response:', response);
             this.resetContactForm(ngForm);
           },
           error: (error) => {

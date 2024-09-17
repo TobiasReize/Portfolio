@@ -19,7 +19,7 @@ export class ProjectsComponent {
       techstack: 'JavaScript | HTML | CSS | Firebase',
       description: 'project_description_join',
       image: 'join.png',
-      linkTest: '#',
+      linkTest: 'https://join.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/Join-200.git'
     },
     {
@@ -27,16 +27,16 @@ export class ProjectsComponent {
       techstack: 'JavaScript | HTML | CSS',
       description: 'project_description_epl',
       image: 'el-pollo-loco.png',
-      linkTest: '#',
+      linkTest: 'https://epl.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/El-Pollo-Loco.git'
     },
     {
-      title: 'Simple CRM',
-      techstack: 'Angular | Firebase',
+      title: 'Next project...',
+      techstack: '',
       description: 'project_description_crm',
       image: 'simple-crm.png',
-      linkTest: '#',
-      linkGithub: '#'
+      linkTest: '',
+      linkGithub: ''
     }
   ];
 

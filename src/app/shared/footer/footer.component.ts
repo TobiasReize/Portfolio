@@ -15,35 +15,10 @@ export class FooterComponent {
   constructor(private portfolioService: PortfolioService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
 
-  // ngOnInit(): void {
-  //   this.checkCurrentPath();
-  // }
-
-
-  // checkCurrentPath() {
-  //   let currentUrl = this.activatedRoute.snapshot.url;
-  //   if (currentUrl.length > 0) {
-  //     let currentPath = currentUrl[0].path;
-  //     if (currentPath === 'imprint' || currentPath === 'privacy-policy') {
-  //       console.log('Not Homepage:', currentPath);
-  //     }
-  //   } else {
-  //     console.log('Homepage');
-      
-  //   }
-  // }
-
-
   scrollToId(id: string) {
     this.portfolioService.scrollToAnchor(id);
     this.portfolioService.scrollId = id;
   }
-
-
-  // goToContact() {
-  //   this.router.navigateByUrl('/');
-  //   this.portfolioService.scrollId = 'contact';
-  // }
 
 
   showImprint() {

@@ -7,6 +7,8 @@ import { ReferencesComponent } from './references/references.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioService } from '../shared/service/portfolio.service';
 import { ActivatedRoute } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-main-content',
@@ -23,6 +25,13 @@ export class MainContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkCurrentPath();
+
+    AOS.init({
+      duration: 750,
+      delay: 150,
+      offset: 250,
+      once: true,
+    });
   }
 
 

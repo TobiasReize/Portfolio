@@ -17,7 +17,7 @@ export class ContactComponent {
 
   agreedPrivacyPolicy: boolean | 'empty' = 'empty';
   mailSent: boolean = false;
-  mailTest: boolean = true;
+  mailTest: boolean = false;
   http = inject(HttpClient);
 
   contactData = {

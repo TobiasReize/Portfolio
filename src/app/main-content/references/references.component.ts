@@ -16,17 +16,17 @@ export class ReferencesComponent {
     {
       person: 'Person 1 - Team Partner',
       comment: '<reference 1>',
-      image: 'person.png'
+      image: ''
     },
     {
       person: 'Person 2 - Team Partner',
       comment: '<reference 2>',
-      image: 'person.png'
+      image: ''
     },
     {
       person: 'Person 3 - Team Partner',
       comment: '<reference 3>',
-      image: 'person.png'
+      image: ''
     }
   ];
 

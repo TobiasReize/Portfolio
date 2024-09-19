@@ -124,8 +124,9 @@ $prim-color-bg: #141D2F;
 }
 
 .right-container {
-    @include dFlex($fd: column, $ai: flex-end);
+    @include dFlex($fd: column, $jc: flex-start, $ai: flex-end);
     width: 420px;
+    height: 630px;
     text-align: end;
 
     p {
@@ -262,6 +263,7 @@ h3 {
 
     .right-container {
         width: 100%;
+        height: unset;
         align-items: flex-end;
     }
 

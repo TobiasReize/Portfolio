@@ -18,7 +18,7 @@ export class ProjectsComponent {
       title: 'Join',
       techstack: 'JavaScript | HTML | CSS | Firebase',
       description: 'project_description_join',
-      image: 'join.png',
+      image: 'join_new.png',
       linkTest: 'https://join.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/Join-200.git'
     },

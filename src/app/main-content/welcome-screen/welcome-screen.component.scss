@@ -1,0 +1,33 @@
+// variables:
+$prim-color-green: #70E61C;
+$prim-color-purple: #9747FF;
+$prim-color-bg: #141D2F;
+
+@mixin dFlex($fd:row, $jc:center, $ai:center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.fs-72 {
+    font-size: 72px;
+}
+
+.cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

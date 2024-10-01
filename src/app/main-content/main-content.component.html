@@ -1,3 +1,6 @@
+@if (portfolioService.welcomeScreen) {
+    <app-welcome-screen (welcomeFinished)="setWelcomeVariable($event)" [ngClass]="{'opacity': welcomeFinished}"></app-welcome-screen>
+}
 <app-hero class="padding-lr50"></app-hero>
 <app-about-me id="about_me" data-aos="fade-right"></app-about-me>
 <app-my-skills class="padding-lr50" id="my_skills" data-aos="fade-left"></app-my-skills>

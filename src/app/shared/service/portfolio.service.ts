@@ -6,6 +6,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class PortfolioService {
 
+  welcomeScreen: boolean = true;
   scrollId: string = '';
   homepage: boolean = true;
 

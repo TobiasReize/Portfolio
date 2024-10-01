@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
@@ -13,11 +15,13 @@ import 'aos/dist/aos.css';
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [HeroComponent, AboutMeComponent, MySkillsComponent, ProjectsComponent, ReferencesComponent, ContactComponent],
+  imports: [CommonModule, WelcomeScreenComponent, HeroComponent, AboutMeComponent, MySkillsComponent, ProjectsComponent, ReferencesComponent, ContactComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent implements OnInit {
+
+  welcomeFinished = false;
 
 
   constructor(public portfolioService: PortfolioService, private activatedRoute: ActivatedRoute) { }
@@ -52,4 +56,15 @@ export class MainContentComponent implements OnInit {
       this.portfolioService.homepage = true;
     }
   }
+
+
+  /**
+   * Sets the welcomeFinished variable to true.
+   * @param event - boolean value
+   */
+  setWelcomeVariable(event: boolean) {
+    this.welcomeFinished = event;
+  }
+
+
 }

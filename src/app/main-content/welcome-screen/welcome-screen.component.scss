@@ -10,6 +10,11 @@ $prim-color-bg: #141D2F;
     align-items: $ai;
 }
 
+.welcome-content {
+    text-align: center;
+    padding: 0 16px;
+}
+
 .fs-72 {
     font-size: 72px;
 }
@@ -29,5 +34,11 @@ $prim-color-bg: #141D2F;
 
     100% {
         opacity: 0;
+    }
+}
+
+@media(max-width: 850px) {
+    .fs-72 {
+        font-size: 48px;
     }
 }

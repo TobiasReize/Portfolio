@@ -23,7 +23,7 @@ app-welcome-screen {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     background-color: $prim-color-bg;
     z-index: 50;
@@ -38,7 +38,7 @@ app-welcome-screen {
 
 app-hero {
     width: 100%;
-    height: calc(100vh - 150px); /* abzüglich Höhe Header*/
+    height: calc(100dvh - 150px); /* abzüglich Höhe Header*/
     position: relative;
     @include dFlex($fd: column, $jc: unset);
 }
@@ -116,7 +116,7 @@ app-contact {
     }
 
     app-hero {
-        height: calc(100vh - 100px);
+        height: calc(100dvh - 100px);
     }
 
     app-about-me, app-my-skills, app-projects, app-references, app-contact {

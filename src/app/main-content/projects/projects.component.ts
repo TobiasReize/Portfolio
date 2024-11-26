@@ -18,7 +18,7 @@ export class ProjectsComponent {
       title: 'Join',
       techstack: 'JavaScript | HTML | CSS | Firebase',
       description: 'project_description_join',
-      image: 'join_new.png',
+      image: 'join-new.png',
       linkTest: 'https://join.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/Join-200.git'
     },
@@ -29,6 +29,14 @@ export class ProjectsComponent {
       image: 'el-pollo-loco.png',
       linkTest: 'https://epl.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/El-Pollo-Loco.git'
+    },
+    {
+      title: 'DA Bubble',
+      techstack: 'Angular | TypeScript | Firebase',
+      description: 'project_description_dabubble',
+      image: 'da-bubble.png',
+      linkTest: 'https://dabubble.tobias-reize.de/',
+      linkGithub: 'https://github.com/TobiasReize/DABubble.git'
     }
   ];
 

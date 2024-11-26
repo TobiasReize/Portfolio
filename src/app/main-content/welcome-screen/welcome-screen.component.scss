@@ -42,3 +42,10 @@ $prim-color-bg: #141D2F;
         font-size: 48px;
     }
 }
+
+@media(max-width: 600px) {
+    .welcome-content {
+        width: 320px;
+        padding: 0 8px;
+    }
+}

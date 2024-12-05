@@ -23,6 +23,11 @@ export class ReferencesComponent {
       person: 'David K. - Team Partner',
       comment: 'reference_david',
       image: 'david-kolosza.jpg'
+    },
+    {
+      person: 'Christian F. - Team Partner',
+      comment: 'reference_christian',
+      image: 'christian-frei.jpg'
     }
   ];
 

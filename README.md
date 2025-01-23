@@ -1,5 +1,7 @@
 # Portfolio
 
+## Welcome to my own portfolio website. This website is intended to introduce myself and present my most important projects. If you would like to get in touch with me, you can do so using the contact form.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
 ## Development server

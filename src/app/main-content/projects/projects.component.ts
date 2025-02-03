@@ -37,6 +37,14 @@ export class ProjectsComponent {
       image: 'da-bubble.png',
       linkTest: 'https://dabubble.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/DABubble.git'
+    },
+    {
+      title: 'Coderr',
+      techstack: 'Django | Django REST | Python',
+      description: 'project_description_coderr',
+      image: 'coderr.png',
+      linkTest: 'https://coderr.tobias-reize.de/',
+      linkGithub: 'https://github.com/TobiasReize/coderr_backend.git'
     }
   ];
 

@@ -45,6 +45,14 @@ export class ProjectsComponent {
       image: 'coderr.png',
       linkTest: 'https://coderr.tobias-reize.de/',
       linkGithub: 'https://github.com/TobiasReize/coderr_backend.git'
+    },
+    {
+      title: 'Videoflix',
+      techstack: 'Django | Angular | PostgreSQL | Redis',
+      description: 'project_description_videoflix',
+      image: 'videoflix.png',
+      linkTest: 'https://videoflix.tobias-reize.de/',
+      linkGithub: 'https://github.com/TobiasReize/videoflix_backend.git'
     }
   ];
 

@@ -205,7 +205,9 @@ $prim-color-bg: #141D2F;
 
     .comment-box {
         margin-right: 10px;
-        height: 280px;
+        height: unset;
+        width: calc(100% - 16px);
+        gap: 12px;
 
         > p {
             overflow: hidden;
@@ -214,7 +216,7 @@ $prim-color-bg: #141D2F;
         > img {
             height: 40px;
             top: -30px;
-            left: -18px;
+            left: -8px;
         }
     }
 

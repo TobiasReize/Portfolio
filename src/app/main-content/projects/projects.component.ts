@@ -15,28 +15,12 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
-      title: 'Join',
-      techstack: 'JavaScript | HTML | CSS | Firebase',
-      description: 'project_description_join',
-      image: 'join-new.png',
-      linkTest: 'https://join.tobias-reize.de/',
-      linkGithub: 'https://github.com/TobiasReize/Join-200.git'
-    },
-    {
-      title: 'El Pollo Loco',
-      techstack: 'JavaScript | HTML | CSS',
-      description: 'project_description_epl',
-      image: 'el-pollo-loco.png',
-      linkTest: 'https://epl.tobias-reize.de/',
-      linkGithub: 'https://github.com/TobiasReize/El-Pollo-Loco.git'
-    },
-    {
-      title: 'DA Bubble',
-      techstack: 'Angular | TypeScript | Firebase',
-      description: 'project_description_dabubble',
-      image: 'da-bubble.png',
-      linkTest: 'https://dabubble.tobias-reize.de/',
-      linkGithub: 'https://github.com/TobiasReize/DABubble.git'
+      title: 'Videoflix',
+      techstack: 'Django | Angular | PostgreSQL | Redis',
+      description: 'project_description_videoflix',
+      image: 'videoflix.png',
+      linkTest: 'https://videoflix.tobias-reize.de/',
+      linkGithub: 'https://github.com/TobiasReize/videoflix_backend.git'
     },
     {
       title: 'Coderr',
@@ -47,12 +31,28 @@ export class ProjectsComponent {
       linkGithub: 'https://github.com/TobiasReize/coderr_backend.git'
     },
     {
-      title: 'Videoflix',
-      techstack: 'Django | Angular | PostgreSQL | Redis',
-      description: 'project_description_videoflix',
-      image: 'videoflix.png',
-      linkTest: 'https://videoflix.tobias-reize.de/',
-      linkGithub: 'https://github.com/TobiasReize/videoflix_backend.git'
+      title: 'DA Bubble',
+      techstack: 'Angular | TypeScript | Firebase',
+      description: 'project_description_dabubble',
+      image: 'da-bubble.png',
+      linkTest: 'https://dabubble.tobias-reize.de/',
+      linkGithub: 'https://github.com/TobiasReize/DABubble.git'
+    },
+    {
+      title: 'El Pollo Loco',
+      techstack: 'JavaScript | HTML | CSS',
+      description: 'project_description_epl',
+      image: 'el-pollo-loco.png',
+      linkTest: 'https://epl.tobias-reize.de/',
+      linkGithub: 'https://github.com/TobiasReize/El-Pollo-Loco.git'
+    },
+    {
+      title: 'Join',
+      techstack: 'JavaScript | HTML | CSS | Firebase',
+      description: 'project_description_join',
+      image: 'join-new.png',
+      linkTest: 'https://join.tobias-reize.de/',
+      linkGithub: 'https://github.com/TobiasReize/Join-200.git'
     }
   ];
 

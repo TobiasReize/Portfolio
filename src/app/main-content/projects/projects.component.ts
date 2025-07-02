@@ -48,11 +48,11 @@ export class ProjectsComponent {
     },
     {
       title: 'Join',
-      techstack: 'JavaScript | HTML | CSS | Firebase',
+      techstack: 'Angular | TypeScript | Firebase',
       description: 'project_description_join',
       image: 'join-new.png',
       linkTest: 'https://join.tobias-reize.de/',
-      linkGithub: 'https://github.com/TobiasReize/Join-200.git'
+      linkGithub: 'https://github.com/TobiasReize/join_angular.git'
     }
   ];
 
